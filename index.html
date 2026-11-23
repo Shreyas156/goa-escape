@@ -25,9 +25,55 @@
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   
   <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="css/style.css?v=2.6">
+  <link rel="stylesheet" href="css/style.css?v=2.7">
 </head>
 <body>
+
+  <!-- Mobile Menu Inline Controller (Instant, Zero-Lag Execution) -->
+  <script>
+    function toggleMobileMenu(e) {
+      if (e) {
+        if (e.preventDefault) e.preventDefault();
+        if (e.stopPropagation) e.stopPropagation();
+      }
+      var drawer = document.getElementById('mobileMenuDrawer');
+      var backdrop = document.getElementById('mobileMenuBackdrop');
+      var btn = document.getElementById('hamburgerBtn');
+      if (!drawer) return;
+      var isOpen = drawer.classList.contains('active');
+      if (isOpen) {
+        drawer.classList.remove('active');
+        if (backdrop) backdrop.classList.remove('active');
+        if (btn) {
+          btn.classList.remove('active');
+          btn.setAttribute('aria-expanded', 'false');
+        }
+        document.body.style.overflow = '';
+      } else {
+        drawer.classList.add('active');
+        if (backdrop) backdrop.classList.add('active');
+        if (btn) {
+          btn.classList.add('active');
+          btn.setAttribute('aria-expanded', 'true');
+        }
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function closeMobileMenu(e) {
+      if (e && e.stopPropagation) e.stopPropagation();
+      var drawer = document.getElementById('mobileMenuDrawer');
+      var backdrop = document.getElementById('mobileMenuBackdrop');
+      var btn = document.getElementById('hamburgerBtn');
+      if (drawer) drawer.classList.remove('active');
+      if (backdrop) backdrop.classList.remove('active');
+      if (btn) {
+        btn.classList.remove('active');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+      document.body.style.overflow = '';
+    }
+  </script>
 
   <!-- Navigation Bar -->
   <nav class="navbar">
@@ -61,7 +107,7 @@
         </button>
 
         <!-- Mobile Hamburger Toggle Button -->
-        <button id="hamburgerBtn" class="hamburger-btn" aria-label="Open Navigation Menu" aria-expanded="false" onclick="window.toggleMobileMenu && window.toggleMobileMenu(event)">
+        <button id="hamburgerBtn" class="hamburger-btn" aria-label="Open Navigation Menu" aria-expanded="false" onclick="toggleMobileMenu(event)">
           <span class="hamburger-bar"></span>
           <span class="hamburger-bar"></span>
           <span class="hamburger-bar"></span>
@@ -71,7 +117,7 @@
   </nav>
 
   <!-- Mobile Hamburger Menu Overlay & Drawer -->
-  <div id="mobileMenuBackdrop" class="mobile-menu-backdrop" onclick="window.closeMobileMenu && window.closeMobileMenu(event)"></div>
+  <div id="mobileMenuBackdrop" class="mobile-menu-backdrop" onclick="closeMobileMenu(event)"></div>
   <aside id="mobileMenuDrawer" class="mobile-menu-drawer" aria-hidden="true">
     <div class="mobile-menu-header">
       <div class="mobile-menu-brand">
@@ -85,14 +131,14 @@
         <button id="themeToggleBtnMobile" class="theme-toggle-btn mobile-theme-btn" title="Toggle Theme (Dark / Sunset / Light)">
           🌙
         </button>
-        <button id="btnCloseMobileMenu" class="btn-close-menu" aria-label="Close navigation menu" onclick="window.closeMobileMenu && window.closeMobileMenu(event)">&times;</button>
+        <button id="btnCloseMobileMenu" class="btn-close-menu" aria-label="Close navigation menu" onclick="closeMobileMenu(event)">&times;</button>
       </div>
     </div>
 
     <div class="mobile-menu-body">
       <div class="mobile-nav-label">Explore Goa</div>
       <nav class="mobile-nav-list">
-        <a href="#explore" class="mobile-nav-item">
+        <a href="#explore" class="mobile-nav-item" onclick="closeMobileMenu(event)">
           <span class="mobile-nav-icon">📍</span>
           <div class="mobile-nav-info">
             <span class="mobile-nav-title">Spots</span>
@@ -100,7 +146,7 @@
           </div>
           <span class="mobile-nav-chevron">›</span>
         </a>
-        <a href="#itineraries" class="mobile-nav-item">
+        <a href="#itineraries" class="mobile-nav-item" onclick="closeMobileMenu(event)">
           <span class="mobile-nav-icon">🗓️</span>
           <div class="mobile-nav-info">
             <span class="mobile-nav-title">5-Day Plan</span>
@@ -108,7 +154,7 @@
           </div>
           <span class="mobile-nav-chevron">›</span>
         </a>
-        <a href="#cafes" class="mobile-nav-item">
+        <a href="#cafes" class="mobile-nav-item" onclick="closeMobileMenu(event)">
           <span class="mobile-nav-icon">☕</span>
           <div class="mobile-nav-info">
             <span class="mobile-nav-title">Cafes & Dining</span>
@@ -116,7 +162,7 @@
           </div>
           <span class="mobile-nav-chevron">›</span>
         </a>
-        <a href="#nightlife-casinos" class="mobile-nav-item">
+        <a href="#nightlife-casinos" class="mobile-nav-item" onclick="closeMobileMenu(event)">
           <span class="mobile-nav-icon">🎰</span>
           <div class="mobile-nav-info">
             <span class="mobile-nav-title">Casinos & Parties</span>
@@ -124,7 +170,7 @@
           </div>
           <span class="mobile-nav-chevron">›</span>
         </a>
-        <a href="#stays" class="mobile-nav-item">
+        <a href="#stays" class="mobile-nav-item" onclick="closeMobileMenu(event)">
           <span class="mobile-nav-icon">🏨</span>
           <div class="mobile-nav-info">
             <span class="mobile-nav-title">Stays</span>
@@ -132,7 +178,7 @@
           </div>
           <span class="mobile-nav-chevron">›</span>
         </a>
-        <a href="#activities" class="mobile-nav-item">
+        <a href="#activities" class="mobile-nav-item" onclick="closeMobileMenu(event)">
           <span class="mobile-nav-icon">🏄</span>
           <div class="mobile-nav-info">
             <span class="mobile-nav-title">Activities & Flea Markets</span>
@@ -140,7 +186,7 @@
           </div>
           <span class="mobile-nav-chevron">›</span>
         </a>
-        <a href="#sightseeing" class="mobile-nav-item">
+        <a href="#sightseeing" class="mobile-nav-item" onclick="closeMobileMenu(event)">
           <span class="mobile-nav-icon">⛪</span>
           <div class="mobile-nav-info">
             <span class="mobile-nav-title">Sightseeing Beyond Beaches</span>
@@ -148,7 +194,7 @@
           </div>
           <span class="mobile-nav-chevron">›</span>
         </a>
-        <a href="#tips" class="mobile-nav-item">
+        <a href="#tips" class="mobile-nav-item" onclick="closeMobileMenu(event)">
           <span class="mobile-nav-icon">💡</span>
           <div class="mobile-nav-info">
             <span class="mobile-nav-title">Travel Hacks</span>
@@ -529,6 +575,6 @@
   <div class="toast" id="toast">Spot added to your trip!</div>
 
   <!-- Application Script (ES Module) -->
-  <script type="module" src="js/app.js?v=2.6"></script>
+  <script type="module" src="js/app.js?v=2.7"></script>
 </body>
 </html>

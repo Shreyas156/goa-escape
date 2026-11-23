@@ -1036,5 +1036,9 @@ function initApp() {
   initEventListeners();
 }
 
-// Run on DOM Ready
-document.addEventListener('DOMContentLoaded', initApp);
+// Run on DOM Ready (immediate if already parsed)
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initApp);
+} else {
+  initApp();
+}

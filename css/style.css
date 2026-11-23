@@ -272,20 +272,20 @@ body::after {
 .mobile-menu-backdrop {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.65);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  z-index: 1500;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 9998;
   opacity: 0;
   visibility: hidden;
-  transition: all 0.3s ease;
-  display: none;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  pointer-events: none;
 }
 
 .mobile-menu-backdrop.active {
-  opacity: 1;
-  visibility: visible;
-  display: block;
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
 }
 
 .mobile-menu-drawer {
@@ -294,21 +294,24 @@ body::after {
   right: 0;
   width: min(85vw, 340px);
   height: 100dvh;
+  height: 100vh;
   background: var(--bg-card);
   border-left: 1px solid var(--border-color);
   box-shadow: -10px 0 35px rgba(0, 0, 0, 0.5);
-  z-index: 1501;
+  z-index: 9999;
   display: flex;
   flex-direction: column;
   transform: translateX(100%);
-  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.35s ease;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.3s ease;
   overflow: hidden;
   visibility: hidden;
+  pointer-events: none;
 }
 
 .mobile-menu-drawer.active {
-  transform: translateX(0);
-  visibility: visible;
+  transform: translateX(0) !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
 }
 
 .mobile-menu-header {
