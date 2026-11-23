@@ -16,6 +16,9 @@
   <meta property="og:description" content="Explore Dil Chahta Hai Fort, Parra Road, Cola Lagoon, Dudhsagar, and hidden gems. Direct Google Maps navigation for every spot.">
   <meta property="og:image" content="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=1200&q=80">
 
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🥥%3C/text%3E%3C/svg%3E">
+
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -207,9 +210,27 @@
       <!-- Return to Top Coconut Button at the end of the page -->
       <div class="footer-top-wrap">
         <button id="footerScrollTop" class="btn-coconut-top" title="Catch the wave back to top!">
-          <span class="coconut-bounce">🥥</span>
+          <span class="coconut-icon-wrap">
+            <svg class="coconut-svg" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 18 C14 8, 26 10, 28 22 C22 20, 16 22, 12 18Z" fill="#10b981" />
+              <path d="M8 24 C8 14, 20 14, 24 24 C18 24, 14 26, 8 24Z" fill="#059669" opacity="0.8" />
+              <ellipse cx="32" cy="40" rx="19" ry="17" fill="#78350f" />
+              <path d="M20 40 Q32 54 44 40" stroke="#451a03" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.5"/>
+              <ellipse cx="32" cy="29" rx="17" ry="9" fill="#451a03" />
+              <ellipse cx="32" cy="29" rx="15" ry="7.5" fill="#f8fafc" />
+              <ellipse cx="32" cy="30" rx="11.5" ry="5" fill="#38bdf8" opacity="0.85" />
+              <path d="M38 12 L43 6 M38 12 L33 29" stroke="#f43f5e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M40 9.5 L36.5 14" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"/>
+              <circle cx="21" cy="24" r="4.5" fill="#f43f5e"/>
+              <circle cx="21" cy="24" r="1.8" fill="#facc15"/>
+            </svg>
+          </span>
           <span class="btn-coconut-text">Back to Top</span>
-          <span class="coconut-arrow">↑</span>
+          <span class="coconut-arrow">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 19V5M5 12l7-7 7 7"/>
+            </svg>
+          </span>
         </button>
       </div>
 
@@ -220,9 +241,26 @@
   </footer>
 
   <!-- Floating Coconut Return to Top Button -->
-  <button id="floatingScrollTop" class="floating-coconut-btn" title="Back to Top 🥥" aria-label="Return to top">
-    <span class="floating-coconut-icon">🥥</span>
-    <span class="floating-coconut-arrow">↑</span>
+  <button id="floatingScrollTop" class="floating-coconut-btn" title="Back to Top" aria-label="Return to top">
+    <span class="floating-coconut-inner">
+      <svg class="floating-coconut-svg" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 18 C14 8, 26 10, 28 22 C22 20, 16 22, 12 18Z" fill="#10b981" />
+        <path d="M8 24 C8 14, 20 14, 24 24 C18 24, 14 26, 8 24Z" fill="#059669" opacity="0.8" />
+        <ellipse cx="32" cy="40" rx="19" ry="17" fill="#78350f" />
+        <path d="M20 40 Q32 54 44 40" stroke="#451a03" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.5"/>
+        <ellipse cx="32" cy="29" rx="17" ry="9" fill="#451a03" />
+        <ellipse cx="32" cy="29" rx="15" ry="7.5" fill="#f8fafc" />
+        <ellipse cx="32" cy="30" rx="11.5" ry="5" fill="#38bdf8" opacity="0.85" />
+        <path d="M38 12 L43 6 M38 12 L33 29" stroke="#f43f5e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="21" cy="24" r="4.5" fill="#f43f5e"/>
+        <circle cx="21" cy="24" r="1.8" fill="#facc15"/>
+      </svg>
+      <span class="floating-arrow-badge">
+        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 19V5M5 12l7-7 7 7"/>
+        </svg>
+      </span>
+    </span>
   </button>
 
   <!-- Saved Itinerary / Bucket List Drawer -->
