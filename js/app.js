@@ -597,6 +597,34 @@ function initEventListeners() {
 
   // Theme Toggle Button
   elements.themeToggleBtn.addEventListener('click', cycleTheme);
+
+  // Return to Top (Coconut Buttons)
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
+  const footerScrollBtn = document.getElementById('footerScrollTop');
+  const floatingScrollBtn = document.getElementById('floatingScrollTop');
+
+  if (footerScrollBtn) {
+    footerScrollBtn.addEventListener('click', scrollToTop);
+  }
+
+  if (floatingScrollBtn) {
+    floatingScrollBtn.addEventListener('click', scrollToTop);
+
+    // Show floating button when scrolled down
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 350) {
+        floatingScrollBtn.classList.add('show');
+      } else {
+        floatingScrollBtn.classList.remove('show');
+      }
+    }, { passive: true });
+  }
 }
 
 // ================= Application Initialization =================

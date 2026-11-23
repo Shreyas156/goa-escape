@@ -198,16 +198,32 @@
 
   <!-- Footer -->
   <footer class="footer">
-    <div class="container">
+    <div class="container footer-content">
       <div class="footer-brand">🌴 Goa Escape</div>
       <p class="footer-text">
         The ultimate modern guide to discovering North and South Goa. Designed with love for road-trippers, reel creators, and peace seekers.
       </p>
-      <p style="font-size: 13px; color: var(--text-dim); margin-top: 12px;">
+
+      <!-- Return to Top Coconut Button at the end of the page -->
+      <div class="footer-top-wrap">
+        <button id="footerScrollTop" class="btn-coconut-top" title="Catch the wave back to top!">
+          <span class="coconut-bounce">🥥</span>
+          <span class="btn-coconut-text">Back to Top</span>
+          <span class="coconut-arrow">↑</span>
+        </button>
+      </div>
+
+      <p style="font-size: 13px; color: var(--text-dim); margin-top: 20px;">
         🚀 Optimized for instant 1-click deployment on <strong>Vercel</strong>.
       </p>
     </div>
   </footer>
+
+  <!-- Floating Coconut Return to Top Button -->
+  <button id="floatingScrollTop" class="floating-coconut-btn" title="Back to Top 🥥" aria-label="Return to top">
+    <span class="floating-coconut-icon">🥥</span>
+    <span class="floating-coconut-arrow">↑</span>
+  </button>
 
   <!-- Saved Itinerary / Bucket List Drawer -->
   <div class="drawer-backdrop" id="drawerBackdrop"></div>
