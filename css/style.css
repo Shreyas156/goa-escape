@@ -1479,6 +1479,259 @@ body::after {
   transform: translateY(0);
 }
 
+/* ================= Directory Sections (Cafes, Nightlife, Stays, Activities, Sightseeing) ================= */
+.directory-section {
+  padding: 60px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.sub-section-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-main);
+  margin: 36px 0 18px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.area-filter-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+.directory-pill {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  color: var(--text-dim);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 13.5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.directory-pill:hover {
+  color: var(--text-main);
+  border-color: rgba(56, 189, 248, 0.4);
+  background: rgba(56, 189, 248, 0.08);
+}
+
+.directory-pill.active {
+  background: linear-gradient(135deg, #0284c7 0%, #0d9488 100%);
+  color: #ffffff;
+  border-color: transparent;
+  box-shadow: 0 4px 14px rgba(2, 132, 199, 0.3);
+}
+
+.directory-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 310px), 1fr));
+  gap: 20px;
+}
+
+.directory-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.directory-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(56, 189, 248, 0.45);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+.dir-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.dir-area-badge {
+  font-size: 11.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 4px 10px;
+  border-radius: 6px;
+  background: rgba(56, 189, 248, 0.12);
+  color: #38bdf8;
+  border: 1px solid rgba(56, 189, 248, 0.25);
+}
+
+.dir-card-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 6px;
+  line-height: 1.3;
+}
+
+.dir-location {
+  font-size: 13px;
+  color: var(--text-dim);
+  margin-bottom: 8px;
+}
+
+.dir-card-desc {
+  font-size: 13.5px;
+  color: var(--text-dim);
+  line-height: 1.5;
+  margin-top: 4px;
+  flex-grow: 1;
+}
+
+.btn-maps-sm {
+  font-size: 11.5px;
+  font-weight: 700;
+  padding: 5px 12px;
+  border-radius: 8px;
+  background: rgba(56, 189, 248, 0.12);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  color: #38bdf8;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.btn-maps-sm:hover {
+  background: #0284c7;
+  color: white;
+  border-color: transparent;
+  transform: translateY(-1px);
+}
+
+/* Casino specific cards */
+.casino-card {
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  background: radial-gradient(circle at top right, rgba(245, 158, 11, 0.08), transparent 60%), var(--bg-card);
+}
+
+.casino-card:hover {
+  border-color: rgba(245, 158, 11, 0.7);
+  box-shadow: 0 12px 30px rgba(245, 158, 11, 0.18);
+}
+
+.casino-badge {
+  font-size: 11.5px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 6px;
+  background: rgba(245, 158, 11, 0.15);
+  color: #fbbf24;
+  border: 1px solid rgba(245, 158, 11, 0.35);
+}
+
+.casino-entry-box {
+  background: rgba(245, 158, 11, 0.07);
+  border: 1px solid rgba(245, 158, 11, 0.2);
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 12.5px;
+  color: var(--text-main);
+  margin: 10px 0;
+}
+
+/* Party specific cards */
+.party-card {
+  border: 1px solid rgba(168, 85, 247, 0.25);
+  background: radial-gradient(circle at top right, rgba(168, 85, 247, 0.08), transparent 60%), var(--bg-card);
+}
+
+.party-card:hover {
+  border-color: rgba(168, 85, 247, 0.6);
+  box-shadow: 0 12px 30px rgba(168, 85, 247, 0.2);
+}
+
+.party-tag {
+  font-size: 11.5px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 6px;
+  background: rgba(168, 85, 247, 0.15);
+  color: #c084fc;
+  border: 1px solid rgba(168, 85, 247, 0.35);
+}
+
+/* Stay specific cards */
+.stays-tabs-wrap,
+.sightseeing-tabs-wrap {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.stay-card {
+  border: 1px solid rgba(14, 165, 233, 0.2);
+}
+
+.stay-type-label {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 4px;
+  background: rgba(14, 165, 233, 0.15);
+  color: #38bdf8;
+}
+
+.dir-region-badge {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 4px;
+  background: rgba(16, 185, 129, 0.15);
+  color: #34d399;
+}
+
+/* Activities & Markets */
+.watersports-badge {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 4px;
+  background: rgba(6, 182, 212, 0.15);
+  color: #22d3ee;
+}
+
+.market-badge {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 4px;
+  background: rgba(236, 72, 153, 0.15);
+  color: #f472b6;
+}
+
+.market-time-badge {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 6px;
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  color: #34d399;
+  margin-bottom: 8px;
+  display: inline-block;
+}
+
 /* ================= Responsive Queries ================= */
 
 @media (max-width: 992px) {
@@ -1855,6 +2108,67 @@ body::after {
   .tip-detail {
     font-size: 12.5px;
     line-height: 1.5;
+  }
+
+  /* Directory Sections (Mobile) */
+  .directory-section {
+    padding: 36px 0;
+  }
+
+  .sub-section-title {
+    font-size: 18px;
+    margin: 22px 0 12px 0;
+  }
+
+  .area-filter-pills {
+    display: flex;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding-bottom: 8px;
+    margin-bottom: 16px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .area-filter-pills::-webkit-scrollbar {
+    display: none;
+  }
+
+  .directory-pill {
+    padding: 6px 12px;
+    font-size: 12px;
+    flex-shrink: 0;
+  }
+
+  .directory-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .directory-card {
+    padding: 15px;
+    border-radius: 14px;
+  }
+
+  .dir-card-title {
+    font-size: 16px;
+  }
+
+  .dir-card-desc {
+    font-size: 12.5px;
+  }
+
+  .stays-tabs-wrap,
+  .sightseeing-tabs-wrap {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding-bottom: 6px;
+    scrollbar-width: none;
+  }
+
+  .stays-tabs-wrap::-webkit-scrollbar,
+  .sightseeing-tabs-wrap::-webkit-scrollbar {
+    display: none;
   }
 
   /* Spot Modal (Mobile Bottom-Sheet Style) */

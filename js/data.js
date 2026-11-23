@@ -878,11 +878,308 @@ export const GOA_SPOTS = [
     timings: "11:00 AM – Midnight Daily",
     insiderHack: "Ask for the infused Cashew Feni tasting flight if you're trying Goa's heritage spirit for the first time.",
     vibes: ["Craft Feni Bar", "Acoustic Live Gigs", "Garden Bistro", "Indie Vibes"]
+  },
+  {
+    id: "deltin-royale-casino",
+    name: "Deltin Royale Casino",
+    tagline: "Asia’s Largest Luxury Offshore Casino & Entertainment Cruise",
+    region: "north",
+    regionLabel: "North Goa",
+    category: "clubs",
+    categories: ["clubs", "nightlife", "insta-famous"],
+    rating: 4.6,
+    reviewsCount: "28,000+",
+    area: "Mandovi River, Panjim, North Goa",
+    lat: 15.5015,
+    lng: 73.8277,
+    mapsUrl: "https://www.google.com/maps/search/?api=1&query=Deltin+Royale+Casino+Panaji+Goa",
+    image: "https://images.unsplash.com/photo-1511193311914-0346f16efe90?auto=format&fit=crop&w=1200&q=80",
+    description: "Spanning 40,000 sq ft across four luxurious decks on the Mandovi River, Deltin Royale offers international gaming tables, Vegas-style live dance shows, dedicated VIP poker rooms, and gourmet multi-cuisine dining with open-deck sky lounges.",
+    reelTip: "Capture the glittering neon cruise ship exterior as you ride the feeder boat across the Mandovi river at night.",
+    bestTime: "8:00 PM – 4:00 AM",
+    entryFee: "₹3,000 – ₹4,500/person (Feeder boat, buffet dinner, house drinks & OTPC gaming chips)",
+    timings: "Open 24 Hours Daily (Entertainment starts 8 PM)",
+    insiderHack: "Strict formal/smart-casual dress code: closed shoes and full-length trousers are mandatory for men.",
+    vibes: ["Luxury Casino", "Floating Cruise", "Vegas Vibe", "Fine Dining"]
+  },
+  {
+    id: "big-daddy-casino",
+    name: "Big Daddy Casino",
+    tagline: "High-Roller 3-Deck Floating Casino, Live Shows & Riverfront Glitz",
+    region: "north",
+    regionLabel: "North Goa",
+    category: "clubs",
+    categories: ["clubs", "nightlife"],
+    rating: 4.5,
+    reviewsCount: "22,500+",
+    area: "Mandovi River, Panjim, North Goa",
+    lat: 15.5002,
+    lng: 73.8310,
+    mapsUrl: "https://www.google.com/maps/search/?api=1&query=Big+Daddy+Casino+Panaji+Goa",
+    image: "https://images.unsplash.com/photo-1518609878373-06d740f60d8b?auto=format&fit=crop&w=1200&q=80",
+    description: "A glamorous floating gaming destination on the Mandovi River offering over 110 gaming tables, 900 gaming positions, high-stakes VIP salons, international dance troupes, and world-class culinary delights.",
+    reelTip: "Film the illuminated grand staircase and live cabaret performers from the 3rd deck open-air bar.",
+    bestTime: "9:00 PM – 3:30 AM",
+    entryFee: "₹2,500 – ₹4,000/person (Luxury feeder boat, dinner buffet, drinks & play coupons)",
+    timings: "Open 24 Hours",
+    insiderHack: "Pre-book VIP entry packages online to bypass queues at the Panjim jetty feeder counters on weekends.",
+    vibes: ["High Roller", "Floating Las Vegas", "Live Cabaret", "Mandovi River"]
+  },
+  {
+    id: "majestic-pride-casino",
+    name: "Majestic Pride Casino",
+    tagline: "Grand Floating Catamaran with Indian & International Gaming Tables",
+    region: "north",
+    regionLabel: "North Goa",
+    category: "clubs",
+    categories: ["clubs", "nightlife"],
+    rating: 4.5,
+    reviewsCount: "19,000+",
+    area: "Mandovi River, Panjim, North Goa",
+    lat: 15.4988,
+    lng: 73.8335,
+    mapsUrl: "https://www.google.com/maps/search/?api=1&query=Majestic+Pride+Casino+Panaji+Goa",
+    image: "https://images.unsplash.com/photo-1541123437800-1bb1317badc2?auto=format&fit=crop&w=1200&q=80",
+    description: "A multi-deck catamaran gaming ship offering Roulette, Blackjack, Baccarat, Teen Patti, and Andar Bahar alongside live DJ parties, Bollywood dance performances, and river-view dining.",
+    reelTip: "Capture the glittering reflection of Panjim city lights dancing on the Mandovi waters from the top deck lounge.",
+    bestTime: "8:30 PM – 2:30 AM",
+    entryFee: "₹2,000 – ₹3,500/person (Includes gaming chips, buffet dinner, and house beverages)",
+    timings: "Open 24/7",
+    insiderHack: "Great option for groups and beginners looking for classic Indian card games alongside international table games.",
+    vibes: ["Catamaran Casino", "Teen Patti & Roulette", "DJ Nights", "Panjim Skyline"]
+  },
+  {
+    id: "marbella-beach-resort",
+    name: "Marbela Beach Resort & Lounge",
+    tagline: "White Cabana Luxury, Champagne Sundowners & Deep House",
+    region: "north",
+    regionLabel: "North Goa",
+    category: "clubs",
+    categories: ["clubs", "sunset", "cafes"],
+    rating: 4.6,
+    reviewsCount: "15,800+",
+    area: "Morjim Beach, North Goa",
+    lat: 15.6312,
+    lng: 73.7298,
+    mapsUrl: "https://www.google.com/maps/search/?api=1&query=Marbela+Beach+Resort+Morjim+Goa",
+    image: "https://images.unsplash.com/photo-1515238152791-8216bfdf89a7?auto=format&fit=crop&w=1200&q=80",
+    description: "The premier luxury beach club in Morjim. Features iconic draped white tent cabanas right on the beach sand, champagne lounges, international guest DJs, and breathtaking sunset parties.",
+    reelTip: "Film a slow-motion walk past the flowing white beach cabanas as the sun dips into the Arabian Sea with champagne glasses clinking.",
+    bestTime: "5:00 PM – 11:30 PM (Sundowner to night party)",
+    entryFee: "Free Entry / ₹2,000 – ₹3,000 Table Cover on weekend party nights",
+    timings: "11:00 AM – 1:00 AM Daily",
+    insiderHack: "Reserve the front-row ocean cabanas early for the best sunset view and beach club service.",
+    vibes: ["White Cabanas", "Champagne Sundowner", "Luxury Beach Club", "Deep House"]
+  },
+  {
+    id: "reis-magos-fort",
+    name: "Reis Magos Fort",
+    tagline: "Restored 1551 Riverfront Fortress Overlooking Mandovi Estuary",
+    region: "north",
+    regionLabel: "North Goa",
+    category: "forts",
+    categories: ["forts", "heritage"],
+    rating: 4.5,
+    reviewsCount: "16,200+",
+    area: "Reis Magos (Near Verem / Candolim), North Goa",
+    lat: 15.4972,
+    lng: 73.8091,
+    mapsUrl: "https://www.google.com/maps/search/?api=1&query=Reis+Magos+Fort+Goa",
+    image: "https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?auto=format&fit=crop&w=1200&q=80",
+    description: "Predating Fort Aguada by half a century, this immaculately restored laterite fort guards the mouth of the Mandovi River. It features dramatic sea bastions, authentic Portuguese cannons, and cultural art exhibitions.",
+    reelTip: "Stand by the laterite rampart archways overlooking the Mandovi River with Panjim city in the distant background.",
+    bestTime: "10:00 AM – 12:30 PM or 3:30 PM – 5:00 PM",
+    entryFee: "₹50 adult, ₹25 student (Camera ₹100)",
+    timings: "9:30 AM – 5:00 PM (Closed on Mondays)",
+    insiderHack: "Far less crowded than Aguada; visit Reis Magos Church nearby, one of the oldest churches in Bardez.",
+    vibes: ["Historic", "River Bastion", "Less Crowded", "Immaculate"]
+  },
+  {
+    id: "immaculate-conception-church-panjim",
+    name: "Our Lady of the Immaculate Conception Church",
+    tagline: "The Iconic Baroque White Zig-Zag Staircase Landmark of Panjim",
+    region: "north",
+    regionLabel: "North Goa",
+    category: "heritage",
+    categories: ["heritage", "insta-famous"],
+    rating: 4.7,
+    reviewsCount: "41,000+",
+    area: "Church Square, Panjim, North Goa",
+    lat: 15.4989,
+    lng: 73.8298,
+    mapsUrl: "https://www.google.com/maps/search/?api=1&query=Our+Lady+of+the+Immaculate+Conception+Church+Panaji+Goa",
+    image: "https://images.unsplash.com/photo-1548625361-195feee1317a?auto=format&fit=crop&w=1200&q=80",
+    description: "Built in 1609, this pristine whitewashed church towers over Panjim with its famous crisscrossing baroque zig-zag staircases. It houses the second largest church bell in Goa, cast in Lisbon.",
+    reelTip: "Stand at the base of the white zig-zag stairs looking up at golden hour, or visit at 7 PM when the entire church is lit up with fairy lights.",
+    bestTime: "8:00 AM – 10:00 AM (empty stairs) or 6:30 PM for illumination",
+    entryFee: "Free Entry",
+    timings: "9:00 AM – 12:30 PM, 3:30 PM – 7:30 PM",
+    insiderHack: "Wear clothing covering knees and shoulders if entering the prayer hall.",
+    vibes: ["Baroque Icon", "Zig-Zag Stairs", "Fairytale Church", "Panjim Heart"]
+  },
+  {
+    id: "eva-cafe-anjuna",
+    name: "Eva Cafe",
+    tagline: "Santorini-Inspired Whitewashed Clifftop Beach Cafe",
+    region: "north",
+    regionLabel: "North Goa",
+    category: "cafes",
+    categories: ["cafes", "sunset", "insta-famous"],
+    rating: 4.6,
+    reviewsCount: "18,400+",
+    area: "North Anjuna Beach Cliff, North Goa",
+    lat: 15.5822,
+    lng: 73.7428,
+    mapsUrl: "https://www.google.com/maps/search/?api=1&query=Eva+Cafe+Anjuna+Goa",
+    image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80",
+    description: "Perched right over the waves on North Anjuna cliff, Eva Cafe features whitewashed stone walls, macramé hammocks, organic shakshuka, fresh berry smoothies, and uninterrupted front-row Arabian Sea sunsets.",
+    reelTip: "Record your iced coffee or brunch plate with waves breaking on the rocks directly below your table.",
+    bestTime: "9:00 AM for seaside breakfast; 5:00 PM for sunset drinks",
+    entryFee: "Free Entry (~₹800 – ₹1,200 for two)",
+    timings: "9:00 AM – 8:00 PM Daily",
+    insiderHack: "Tables by the edge fill up fast for sunset; arrive by 4:30 PM to secure the best seats.",
+    vibes: ["Santorini Vibe", "Cliffside Waves", "Aesthetic Brunch", "Boho Magic"]
+  },
+  {
+    id: "baba-au-rhum",
+    name: "Baba Au Rhum",
+    tagline: "Legendary French Bakery & Jungle Bamboo Cafe in Anjuna",
+    region: "north",
+    regionLabel: "North Goa",
+    category: "cafes",
+    categories: ["cafes", "hidden-gems"],
+    rating: 4.7,
+    reviewsCount: "21,000+",
+    area: "Sim Vaddo, Anjuna, North Goa",
+    lat: 15.5833,
+    lng: 73.7544,
+    mapsUrl: "https://www.google.com/maps/search/?api=1&query=Baba+Au+Rhum+Anjuna+Goa",
+    image: "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1200&q=80",
+    description: "Set amidst bamboo groves and green fields, Baba Au Rhum is famous for wood-fired artisanal pizzas, freshly baked French baguettes and croissants, gourmet burgers, and craft beers.",
+    reelTip: "Film the wood-fired pizza coming out of the glowing oven with lush green jungle gardens surrounding the tables.",
+    bestTime: "10:00 AM – 1:30 PM (Brunch) or 7:30 PM for garden dinner",
+    entryFee: "Free Entry (~₹1,000 for two)",
+    timings: "9:00 AM – 10:30 PM Daily",
+    insiderHack: "Order the signature 'Hercules Burger' or the truffle wood-fired pizza and freshly baked chocolate croissants.",
+    vibes: ["Jungle Cafe", "French Bakery", "Wood-Fired Pizza", "Foodie Cult"]
+  },
+  {
+    id: "saturday-night-market-arpora",
+    name: "Saturday Night Market (Arpora)",
+    tagline: "Goa’s Most Spectacular Open-Air Night Bazaar, Live Stages & Global Food",
+    region: "north",
+    regionLabel: "North Goa",
+    category: "insta-famous",
+    categories: ["insta-famous", "nightlife", "hidden-gems"],
+    rating: 4.6,
+    reviewsCount: "34,000+",
+    area: "Aguada - Siolim Road, Arpora, North Goa",
+    lat: 15.5801,
+    lng: 73.7688,
+    mapsUrl: "https://www.google.com/maps/search/?api=1&query=Saturday+Night+Market+Arpora+Goa",
+    image: "https://images.unsplash.com/photo-1533900298318-6b8da08a523e?auto=format&fit=crop&w=1200&q=80",
+    description: "A legendary cultural extravaganza operating every Saturday night during season. Hundreds of fairy-lit stalls sell handmade jewelry, bohemian apparel, and leather goods, centered around a live concert amphitheater and global street food zone.",
+    reelTip: "Film a walk-through down the central illuminated bazaar lane with live acoustic bands playing in the background.",
+    bestTime: "8:00 PM – Midnight (Every Saturday during season Oct–Apr)",
+    entryFee: "Free Entry",
+    timings: "6:00 PM – 2:00 AM (Saturdays only)",
+    insiderHack: "Arrive by 7:30 PM to find parking easily; sample wood-fired Greek souvlaki and Belgian waffles in the upper food court.",
+    vibes: ["Night Bazaar", "Live Bands", "Global Food", "Boho Treasures"]
+  },
+  {
+    id: "the-cape-goa",
+    name: "The Cape Goa",
+    tagline: "Clifftop Luxury Restaurant with Jacuzzis Overlooking Wild Ocean Waves",
+    region: "south",
+    regionLabel: "South Goa",
+    category: "cafes",
+    categories: ["cafes", "sunset", "insta-famous"],
+    rating: 4.8,
+    reviewsCount: "14,200+",
+    area: "Cabo de Rama, Canacona, South Goa",
+    lat: 15.0882,
+    lng: 73.9241,
+    mapsUrl: "https://www.google.com/maps/search/?api=1&query=The+Cape+Goa+Cabo+de+Rama",
+    image: "https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=1200&q=80",
+    description: "Perched dramatically on the jagged cliffs of Cabo de Rama, The Cape Goa offers an unparalleled clifftop dining experience where waves crash 50 feet below. Renowned for sunset cocktails and panoramic vistas.",
+    reelTip: "Film a panoramic sunset reveal of the turquoise Arabian Sea crashing against the rocks right next to your dining table.",
+    bestTime: "4:30 PM – 7:00 PM (Goa's most dramatic cliff sunset)",
+    entryFee: "Free Entry (~₹1,500 – ₹2,500 for two)",
+    timings: "8:00 AM – 10:30 PM Daily",
+    insiderHack: "Combine with visiting Cabo de Rama Fort just 5 minutes away.",
+    vibes: ["Clifftop Luxury", "Dramatic Waves", "Romantic Sunset", "Pure Magic"]
   }
 ];
 
 // Curated 3-Day & 5-Day Ready-Made Itineraries
 export const GOA_ITINERARIES = [
+  {
+    id: "ultimate-5day",
+    title: "The Perfect 5-Day Goa Escape",
+    subtitle: "Complete Hour-by-Hour Master Trail: North Goa Nightlife, Panjim Charm, South Goa Serenity & Scenic Departures",
+    region: "North & South Goa",
+    duration: "5 Days / 4 Nights",
+    bestFor: "First-timers, party lovers, couples & friends",
+    days: [
+      {
+        day: "Day 1: Tuesday — Arrival & North Goa Nightlife",
+        schedule: [
+          { time: "12:30 PM", spot: "Arrival at Goa Airport (GOI)", note: "Land at Goa International Airport (GOI) and take a pre-booked cab to resort in Calangute (~38 km, approx. 1h 15m)" },
+          { time: "02:00 PM", spot: "Check-in & Rental Bike", note: "Check into resort, freshen up, and arrange rental scooter or Thar for the trip" },
+          { time: "03:00 PM", spot: "Rest & Recharge", note: "Take some time to unwind and relax after your journey" },
+          { time: "04:30 PM", spot: "Sunset at Chapora Fort", note: "Ride to Chapora Fort (~30 min). Explore the iconic 'Dil Chahta Hai' fort and soak in 360° sunset views over Vagator coast" },
+          { time: "05:45 PM", spot: "Dinner with a View at Thalassa", note: "Head to Thalassa in Vagator/Siolim (~15 min). Enjoy a sunset dinner with Greek cuisine, cliffside views, and live fire acrobats" },
+          { time: "08:00 PM", spot: "Baga Beach & Tito's Lane Club Hopping", note: "Ride to Baga Beach (~30 min). Walk the shore, then hit Tito's Lane: start at Tito's Club, move to Cape Town Café, and check out Café Mambo" },
+          { time: "12:30 AM", spot: "Return to Resort", note: "Short 10-minute midnight ride back to your resort base in Calangute" }
+        ]
+      },
+      {
+        day: "Day 2: Wednesday — North Goa Explorations & Panjim Charm",
+        schedule: [
+          { time: "08:30 AM", spot: "Resort Breakfast", note: "Enjoy breakfast at the resort before heading out" },
+          { time: "09:30 AM", spot: "Reis Magos Fort", note: "Ride to the restored Reis Magos Fort (~45 min). Explore history, bastions, and Mandovi River panoramas" },
+          { time: "11:15 AM", spot: "Candolim Beach", note: "Head to Candolim Beach (~20 min) for relaxation, sand strolls, and sea breeze" },
+          { time: "12:30 PM", spot: "Authentic Goan Lunch in Panjim", note: "Ride to Panjim (~30 min). Savor authentic Goan seafood thali at Mum's Kitchen or Ritz Classic" },
+          { time: "02:00 PM", spot: "Discover Divar Island", note: "Ride to ferry point (~30 min), cross Mandovi on the roll-on ferry, and explore vintage churches and scenic roads" },
+          { time: "04:30 PM", spot: "Sunset at Dona Paula / Miramar", note: "Ride back towards mainland (~45 min) to catch sunset at Dona Paula View Point or Miramar Beach" },
+          { time: "07:00 PM", spot: "Dinner in Panjim or Calangute", note: "Recommendations: The Fisherman's Wharf (Panjim) or legendary Souza Lobo on Calangute sand" },
+          { time: "08:30 PM", spot: "Nightlife / Club Cabana", note: "Relax at a beach shack or ride up to Club Cabana in Arpora for the famous 'Nightclub in the Sky'" }
+        ]
+      },
+      {
+        day: "Day 3: Thursday — Heritage Trail & Journey to the South",
+        schedule: [
+          { time: "09:30 AM", spot: "Fontainhas (Latin Quarter)", note: "Check out from Calangute. Walk through the colorful, Portuguese-influenced pastel heritage lanes of Fontainhas (~45 min)" },
+          { time: "11:00 AM", spot: "Old Goa UNESCO Heritage", note: "Drive to Old Goa (~25 min). Visit Basilica of Bom Jesus (St. Francis Xavier) and majestic Sé Cathedral" },
+          { time: "12:25 PM", spot: "North to South Transit", note: "Drive through countryside from Old Goa to your South Goa stay at Agonda Resort (~3 hours travel)" },
+          { time: "03:25 PM", spot: "Check-in & Late Lunch", note: "Check into Agonda resort and have a relaxing lunch" },
+          { time: "04:30 PM", spot: "Cola Lagoon Kayaking / Sunset", note: "Quick kayaking session at Cola Lagoon or Palolem Beach (until 5:30 PM), or catch peaceful sunset on Agonda sand" },
+          { time: "07:30 PM", spot: "Dinner in South Goa", note: "Dinner at an Agonda café like Fatima's or Zest, or drive to Martin's Corner (~1h 15m) for a memorable seafood feast" }
+        ]
+      },
+      {
+        day: "Day 4: Friday — South Goa Serenity & Beach Bliss",
+        schedule: [
+          { time: "08:00 AM", spot: "Morning Lagoon Kayaking", note: "Drive to Cola Lagoon or Palolem (~30 min). Enjoy a 2-hour kayaking session in calm, glassy morning waters" },
+          { time: "10:30 AM", spot: "Relax, Unwind & Explore", note: "Return to Agonda. Spend a chilled day at resort pool or beach, local shack lunch, and relaxing spa treatment" },
+          { time: "03:30 PM", spot: "Butterfly Beach Boat Trip", note: "Optional boat trip to secluded Butterfly Beach cove" },
+          { time: "05:30 PM", spot: "Agonda Beach Sunset", note: "Walk to southern end of Agonda Beach for breathtaking, uncrowded sunset views" },
+          { time: "07:30 PM", spot: "Beachfront Candlelight Dinner", note: "Dinner at one of Agonda's beachfront restaurants or at Zest Café under starry skies" }
+        ]
+      },
+      {
+        day: "Day 5: Saturday — Forts, Souvenirs & Departure",
+        schedule: [
+          { time: "08:00 AM", spot: "Breakfast & Checkout", note: "Enjoy final Goan breakfast, complete check-out, and pack luggage into car" },
+          { time: "09:30 AM", spot: "Cabo de Rama Fort (Optional)", note: "Visit Cabo de Rama Fort (~30 min drive) for clifftop ruins and turquoise bay vistas" },
+          { time: "11:00 AM", spot: "Shopping & Lunch in Colva", note: "Drive to Colva (~1h). Shop for souvenirs: cashews, Feni, and Goan masalas. Lunch at Mickey's or Kentuckee" },
+          { time: "01:30 PM", spot: "Final Beach Stroll", note: "Take a memorable brief farewell walk along Colva Beach" },
+          { time: "02:00 PM", spot: "Journey to Airport (GOI)", note: "Drive to Goa International Airport (~1.5 hours), return rental car, and proceed for flight check-in" },
+          { time: "06:00 PM", spot: "Flight Departure", note: "Flight departs from Goa with sun-kissed memories!" }
+        ]
+      }
+    ]
+  },
   {
     id: "north-3day",
     title: "The Viral North Goa 3-Day Trail",
@@ -954,58 +1251,342 @@ export const GOA_ITINERARIES = [
         ]
       }
     ]
+  }
+];
+
+// Curated Cafes Directory (By Area)
+export const GOA_CAFES_DIRECTORY = [
+  {
+    area: "Anjuna",
+    icon: "☕",
+    vibe: "Bohemian, Greek Clifftops & Artisan Bakeries",
+    places: [
+      { name: "Eva Cafe", highlight: "Santorini-style cliffside cafe overlooking crashing waves & shakshuka", query: "Eva+Cafe+Anjuna+Goa" },
+      { name: "Baba Au Rhum", highlight: "French bakery, wood-fired artisanal pizza & burgers in bamboo groves", query: "Baba+Au+Rhum+Anjuna+Goa" },
+      { name: "Babka Cafe", highlight: "Specialty brew coffee, artisanal sourdough, babka loaves & patisserie", query: "Babka+Cafe+Anjuna+Goa" },
+      { name: "Artjuna", highlight: "Garden lifestyle cafe, Mediterranean hummus plates & artisan workshops", query: "Artjuna+Anjuna+Goa" }
+    ]
   },
   {
-    id: "ultimate-5day",
-    title: "The Grand 5-Day Master Goa Odyssey",
-    subtitle: "Best of Both Worlds: 2 Days North + 1 Day Central/Falls + 2 Days South",
-    region: "North & South Goa",
-    duration: "5 Days / 4 Nights",
-    bestFor: "The complete definitive Goa experience",
-    days: [
-      {
-        day: "Day 1: North Goa Hits & Sunset Forts",
-        schedule: [
-          { time: "Morning", spot: "Fontainhas Latin Quarter", note: "Heritage streets & Portuguese breakfast" },
-          { time: "Afternoon", spot: "Parra Coconut Road", note: "Iconic palm avenue photos" },
-          { time: "Sunset", spot: "Chapora Fort & Vagator", note: "Ramparts sunset & clifftop sundowner" }
-        ]
-      },
-      {
-        day: "Day 2: Coastal Bohemian North & Nightlife",
-        schedule: [
-          { time: "Morning", spot: "Sinquerim Fort Sea Wall", note: "Dramatic sea bastion photos" },
-          { time: "Afternoon", spot: "Morjim & Ashwem Beach", note: "Boho beach club lunch" },
-          { time: "Evening", spot: "Arambol Sweet Water Lake", note: "Sunset drum circle & beach vibes" }
-        ]
-      },
-      {
-        day: "Day 3: The Mighty Jungle Cascade & Old Goa",
-        schedule: [
-          { time: "07:00 AM", spot: "Dudhsagar Waterfalls", note: "Jeep safari through Mollem national park" },
-          { time: "02:00 PM", spot: "Tambdi Surla Temple", note: "Ancient 12th-century stone temple" },
-          { time: "05:00 PM", spot: "Old Goa Churches", note: "Basilica of Bom Jesus at golden hour" }
-        ]
-      },
-      {
-        day: "Day 4: South Goa Hidden Beaches & Lagoons",
-        schedule: [
-          { time: "Morning", spot: "Cola Beach Lagoon", note: "Freshwater lagoon kayaking" },
-          { time: "Afternoon", spot: "Cabo de Rama Fort", note: "Turquoise ocean cliffs" },
-          { time: "Sunset", spot: "Agonda Beach", note: "Quiet peaceful sunset and beach shacks" }
-        ]
-      },
-      {
-        day: "Day 5: Palolem Dolphins & Island Escape",
-        schedule: [
-          { time: "Sunrise", spot: "Palolem Beach", note: "Dolphin boat cruise / kayak" },
-          { time: "Late Morning", spot: "Butterfly Beach", note: "Secluded cove swim" },
-          { time: "Evening", spot: "Three Kings Chapel", note: "Final 360-degree Goa sunset farewell" }
-        ]
-      }
+    area: "Baga",
+    icon: "🏖️",
+    vibe: "Bustling Beachfront Shacks & Live Seafood Grills",
+    places: [
+      { name: "Bistro Shack", highlight: "Cozy beach shack with chilled beers, Goan curry, and ocean view", query: "Bistro+Shack+Baga+Goa" },
+      { name: "Shining Star Beach Shack", highlight: "Candlelit beach dinners directly on the sand with grilled catch", query: "Shining+Star+Beach+Shack+Baga+Goa" },
+      { name: "Britto's Restaurant & Bar", highlight: "Legendary Baga institution famed for baked crab, ribs, and desserts", query: "Brittos+Baga+Goa" },
+      { name: "St. Anthony's", highlight: "Karaoke nights, flavored hookahs, and spicy butter garlic prawns", query: "St+Anthonys+Baga+Goa" }
+    ]
+  },
+  {
+    area: "Vagator",
+    icon: "🍹",
+    vibe: "Sunset Clifftop Bars, Speakeasies & Gourmet Bistros",
+    places: [
+      { name: "Hideaway Cafe and Bar", highlight: "Hidden speakeasy cocktail den with craft drinks & live jazz/indie sets", query: "Hideaway+Cafe+Bar+Vagator+Goa" },
+      { name: "Bistro Vagator", highlight: "Chic open-air European bistro with comfort pastas & cocktails", query: "Bistro+Vagator+Goa" },
+      { name: "Paz Goa", highlight: "Serene garden bistro with wood-fired oven & bohemian atmosphere", query: "Paz+Goa+Vagator" },
+      { name: "Jaws Restaurant & Bakery", highlight: "Beloved neighborhood bakery for hot Goan patties, cakes & breakfast", query: "Jaws+Bakery+Vagator+Goa" }
+    ]
+  },
+  {
+    area: "Arambol",
+    icon: "🧘",
+    vibe: "Free-Spirited Hippie Cafes & Healthy Vegan Delights",
+    places: [
+      { name: "Garden of Dreams", highlight: "Fairytale garden sanctuary with smoothie bowls, hammocks & live sitar", query: "Garden+of+Dreams+Arambol+Goa" },
+      { name: "Cafe Junas9", highlight: "Rooftop ocean vista, cold brews, and fresh Mediterranean platters", query: "Cafe+Junas9+Arambol+Goa" },
+      { name: "Cafe Maitree", highlight: "Cliffside seafood & live acoustic performances above the sunset waves", query: "Cafe+Maitree+Arambol+Goa" },
+      { name: "Monkey Bar & Restaurant", highlight: "Lively backpacker chillout lounge with live open-mics & wraps", query: "Monkey+Bar+Arambol+Goa" }
+    ]
+  },
+  {
+    area: "Panjim",
+    icon: "🏛️",
+    vibe: "Colonial Latin Quarter Bakeries & Heritage Cafes",
+    places: [
+      { name: "Caravela Cafe & Bistro", highlight: "Fontainhas specialty coffee bar serving authentic Goan roast & poee", query: "Caravela+Cafe+Panjim+Goa" },
+      { name: "Cafe Bodega", highlight: "Artistic courtyard cafe in Sunaparanta art center with cakes & brunch", query: "Cafe+Bodega+Panjim+Goa" },
+      { name: "Cafe Ashwini", highlight: "Beloved local Goan breakfast joint for hot mirchi bhajji & chana masala", query: "Cafe+Ashwini+Panjim+Goa" },
+      { name: "Cafe Real", highlight: "Historic 1946 heritage institution famed for Sukhi Bhaji, Patal Bhaji & Puri", query: "Cafe+Real+Panaji+Goa" }
+    ]
+  },
+  {
+    area: "South Goa",
+    icon: "🌴",
+    vibe: "Tranquil Garden Bistros & Organic Wellness Cafes",
+    places: [
+      { name: "Cafe Inn (Palolem)", highlight: "Specialty single-origin espresso, gourmet burgers & breakfast wraps", query: "Cafe+Inn+Palolem+Goa" },
+      { name: "Treetop Tava", highlight: "Elevated treehouse dining with panoramic views of Agonda beach surf", query: "Treetop+Tava+Agonda+Goa" },
+      { name: "Zest Cafe (Agonda/Palolem)", highlight: "Award-winning plant-based cafe with matcha lattes, vegan raw cakes & bowls", query: "Zest+Cafe+Agonda+Goa" },
+      { name: "Mandala Cafe", highlight: "Eco-resort sanctuary surrounded by river backwaters and bird life", query: "Mandala+Cafe+Mandrem+Goa" }
+    ]
+  },
+  {
+    area: "Sundowner Hotspots",
+    icon: "🌅",
+    vibe: "Front-Row Sunset Ocean & River Clifftop Lounges",
+    places: [
+      { name: "The Cape Goa (Cabo de Rama)", highlight: "Dramatic clifftop restaurant with Jacuzzi tables & wild ocean waves", query: "The+Cape+Goa+Cabo+de+Rama" },
+      { name: "Aura (Vagator)", highlight: "Elevated sea-view deck with sunset cocktails & melodic tunes", query: "Aura+Vagator+Goa" },
+      { name: "Mamalouka", highlight: "Chic Mediterranean dining and sunset terrace with artisan cocktails", query: "Mamalouka+Goa" },
+      { name: "Dubki", highlight: "Breezy coastal sunset lounge with craft beers and fusion tapas", query: "Dubki+Goa" },
+      { name: "Obrigado By Craftels", highlight: "Panoramic ocean vista retreat with cocktails and golden hour views", query: "Obrigado+By+Craftels+Goa" }
     ]
   }
 ];
+
+// Curated Stays Directory (Hotels & Hostels)
+export const GOA_STAYS_DIRECTORY = {
+  hotels: [
+    {
+      name: "Ocean Palms Goa",
+      region: "North Goa (Calangute)",
+      type: "Resort Hotel",
+      rating: 4.5,
+      highlight: "Palm-lined tropical courtyard, pool bar, and quick beach access",
+      query: "Ocean+Palms+Goa+Calangute"
+    },
+    {
+      name: "The Byke Royal Pearl",
+      region: "North Goa (Baga)",
+      type: "Boutique Hotel",
+      rating: 4.4,
+      highlight: "Vibrant stay with pool just minutes from Tito's Lane and Baga Beach",
+      query: "The+Byke+Royal+Pearl+Baga+Goa"
+    },
+    {
+      name: "RNB Beach Stay",
+      region: "North Goa (Morjim/Ashwem)",
+      type: "Beachfront Hotel",
+      rating: 4.6,
+      highlight: "Boho wooden beach cottages directly on the quiet sands of Morjim",
+      query: "RNB+Beach+Stay+Morjim+Goa"
+    },
+    {
+      name: "Moustache Goa Luxuria",
+      region: "North Goa (Assagao)",
+      type: "Heritage Boutique",
+      rating: 4.7,
+      highlight: "Opulent Portuguese-style villa stay in Assagao's culinary hub",
+      query: "Moustache+Goa+Luxuria+Assagao"
+    },
+    {
+      name: "Fenicia Riverside Resort",
+      region: "South Goa (Betul)",
+      type: "Luxury Riverside",
+      rating: 4.7,
+      highlight: "Ultra-luxury riverfront suites where Sal River meets Arabian Sea",
+      query: "Fenicia+Riverside+Resort+Goa"
+    },
+    {
+      name: "The Village Agonda Resort",
+      region: "South Goa (Agonda)",
+      type: "Eco Beach Resort",
+      rating: 4.8,
+      highlight: "Rustic luxury wooden huts nestled right on Agonda's serene turtle beach",
+      query: "The+Village+Agonda+Resort+Goa"
+    },
+    {
+      name: "Kings Villa Resort",
+      region: "South Goa (Canacona/Palolem)",
+      type: "Private Villas",
+      rating: 4.6,
+      highlight: "Secluded pool villas surrounded by emerald Canacona rainforest hills",
+      query: "Kings+Villa+Resort+Canacona+Goa"
+    },
+    {
+      name: "Obrigado By Craftels",
+      region: "South Goa",
+      type: "Clifftop Retreat",
+      rating: 4.7,
+      highlight: "Panoramic oceanview boutique property crafted for romantic getaways",
+      query: "Obrigado+By+Craftels+Goa"
+    }
+  ],
+  hostels: [
+    {
+      name: "Baba Hostel",
+      region: "North Goa (Anjuna)",
+      type: "Social Backpacker",
+      rating: 4.6,
+      highlight: "Swimming pool, lively common area, and easy access to flea markets",
+      query: "Baba+Hostel+Anjuna+Goa"
+    },
+    {
+      name: "Bonds Hostel",
+      region: "North Goa (Candolim)",
+      type: "Digital Nomad Hub",
+      rating: 4.7,
+      highlight: "Super-fast Wi-Fi, modern co-working, cafe, and nomad community",
+      query: "Bonds+Hostel+Goa"
+    },
+    {
+      name: "House of Memories",
+      region: "North Goa (Vagator)",
+      type: "Heritage Hostel",
+      rating: 4.8,
+      highlight: "Old Goan Portuguese house close to Chapora Fort and sunset cliffs",
+      query: "House+of+Memories+Vagator+Goa"
+    },
+    {
+      name: "Dreams Hostel",
+      region: "North Goa (Vagator)",
+      type: "Hippie Garden Hostel",
+      rating: 4.6,
+      highlight: "Shaded tree garden, hammocks, community kitchen, and acoustic nights",
+      query: "Dreams+Hostel+Vagator+Goa"
+    },
+    {
+      name: "The Whoopers Hostel",
+      region: "South Goa (Palolem)",
+      type: "Artistic Hostel",
+      rating: 4.7,
+      highlight: "Vibrant murals, game room, and minutes from Palolem crescent bay",
+      query: "The+Whoopers+Hostel+Palolem+Goa"
+    },
+    {
+      name: "The Lost Hostel",
+      region: "South Goa (Palolem)",
+      type: "Community Beach Stay",
+      rating: 4.7,
+      highlight: "Warm backpacker community, hostel dinners, and kayaking excursions",
+      query: "The+Lost+Hostel+Palolem+Goa"
+    },
+    {
+      name: "Piccolo Dreams",
+      region: "South Goa (Agonda)",
+      type: "Peaceful Retreat",
+      rating: 4.8,
+      highlight: "Quiet garden hostel tailored for yoga, solo travelers, and nature lovers",
+      query: "Piccolo+Dreams+Agonda+Goa"
+    },
+    {
+      name: "Bunk & Brew",
+      region: "South Goa",
+      type: "Social Co-Living",
+      rating: 4.6,
+      highlight: "Specialty brew bar, outdoor courtyard, and curated South Goa trails",
+      query: "Bunk+and+Brew+Goa"
+    }
+  ]
+};
+
+// Curated Nightlife, Hidden Parties & Casinos
+export const GOA_NIGHTLIFE_AND_CASINOS = {
+  casinos: [
+    {
+      name: "Deltin Royale",
+      location: "Mandovi River, Panjim",
+      highlight: "Asia's largest 40,000 sq ft luxury casino ship, VIP poker rooms, Vegas shows & open sky deck",
+      entry: "₹3,000 – ₹4,500 (Includes feeder boat, buffet, drinks & chips)",
+      query: "Deltin+Royale+Casino+Panaji+Goa"
+    },
+    {
+      name: "Big Daddy Casino",
+      location: "Mandovi River, Panjim",
+      highlight: "Glamorous 3-deck floating casino with 110+ gaming tables and live cabaret dancers",
+      entry: "₹2,500 – ₹4,000 (Includes feeder boat, food, drinks & coupons)",
+      query: "Big+Daddy+Casino+Panaji+Goa"
+    },
+    {
+      name: "Majestic Pride Casino",
+      location: "Mandovi River, Panjim",
+      highlight: "Multi-deck catamaran with Roulette, Teen Patti, Andar Bahar, and DJ entertainment",
+      entry: "₹2,000 – ₹3,500 (Includes gaming chips & buffet dinner)",
+      query: "Majestic+Pride+Casino+Panaji+Goa"
+    }
+  ],
+  partyPlaces: [
+    { name: "Hammerzz Nightclub", area: "Baga Creek", vibe: "Waterfront superclub with kinetic LED ceiling" },
+    { name: "Leopard Valley Goa", area: "Canacona", vibe: "Open-air rainforest stadium with 3D lasers" },
+    { name: "Club Cubana", area: "Arpora", vibe: "Hilltop open bar nightclub with multi-level pool" },
+    { name: "Oh Lala", area: "Siolim", vibe: "Boho riverfront lounge, cocktails & melodic beats" },
+    { name: "Thalassa", area: "Siolim", vibe: "Greek cliffside sunset dining & live fire acrobats" }
+  ],
+  hiddenParties: [
+    { name: "Rock Waves", area: "Morjim Beach", vibe: "Sunset beach shindig & organic deep house right on the sand" },
+    { name: "Ukiyo Beach Resort", area: "Ashvem", vibe: "Boho chic day-to-night beach club with melodic electronica" },
+    { name: "MIR", area: "Arambol", vibe: "Ecstatic dance, conscious electronic gatherings & sunset arts" },
+    { name: "Orion Cafe & Beach Club", area: "Morjim", vibe: "International beach sessions & electronic tunes" },
+    { name: "Marbela Beach Resort", area: "Morjim", vibe: "Draped white cabanas, champagne showers & VIP sundowners" }
+  ]
+};
+
+// Curated Water Sports & Markets Directory
+export const GOA_ACTIVITIES_AND_MARKETS = {
+  waterSports: [
+    {
+      beach: "Baga Beach",
+      region: "North Goa",
+      sports: "Jet Ski, Parasailing, Banana Rides, Bumper Rides, Speedboats",
+      highlight: "The most active watersports hub with high safety standards and competitive combo packages"
+    },
+    {
+      beach: "Sinquerim Beach",
+      region: "North Goa",
+      sports: "Dolphin Safari Boats, Parasailing, Scuba Diving, Jet Ski",
+      highlight: "Parasail with the magnificent Aguada Fort walls in your backdrop"
+    },
+    {
+      beach: "Arambol Beach",
+      region: "North Goa",
+      sports: "Clifftop Paragliding, Surfing Lessons, Stand-Up Paddleboarding, Kitesurfing",
+      highlight: "Goa's capital for paragliding and beginner surf schools with clean swells"
+    }
+  ],
+  fleaMarkets: [
+    {
+      name: "Saturday Night Market",
+      location: "Arpora, North Goa",
+      timing: "Saturdays 6:00 PM – 2:00 AM (Season Oct–Apr)",
+      highlight: "Goa's most iconic night market: live music amphitheater, artisan silver, leather craft & world food"
+    },
+    {
+      name: "Anjuna Flea Market",
+      location: "Anjuna Beachfront",
+      timing: "Wednesdays 9:00 AM – 7:00 PM",
+      highlight: "The original 1970s hippie marketplace with 500+ stalls right by the crashing sea waves"
+    },
+    {
+      name: "Vagator HillTop Market",
+      location: "HillTop, Vagator",
+      timing: "Fridays 5:00 PM – 11:00 PM",
+      highlight: "Boutique artisan market under glowing coconut palms with organic treats, fashion & live acoustic sets"
+    },
+    {
+      name: "Arambol Street Market",
+      location: "Arambol Beach Cliff Path",
+      timing: "Daily 4:00 PM – 9:00 PM",
+      highlight: "Sunset bohemian strip selling crystal jewelry, dreamcatchers, traveler clothing & musical instruments"
+    }
+  ]
+};
+
+// Curated Sightseeing Beyond Beaches
+export const GOA_SIGHTSEEING_DIRECTORY = {
+  churches: [
+    { name: "Basilica of Bom Jesus", area: "Old Goa", highlight: "UNESCO Baroque monument holding St. Francis Xavier's mortal remains" },
+    { name: "Our Lady of the Immaculate Conception", area: "Panjim", highlight: "Pristine white baroque zig-zag staircase in the heart of the capital" },
+    { name: "Church of St. Francis of Assisi", area: "Old Goa", highlight: "Magnificent Portuguese Manueline portal and antique mural paintings" },
+    { name: "Sé Cathedral", area: "Old Goa", highlight: "One of Asia's largest cathedral churches featuring the legendary Golden Bell" },
+    { name: "St. Augustine Tower", area: "Old Goa", highlight: "Dramatic 46-meter soaring ruined laterite tower dating to 1602" }
+  ],
+  forts: [
+    { name: "Chapora Fort", area: "Vagator", highlight: "Iconic 'Dil Chahta Hai' red laterite ramparts overlooking Vagator coast" },
+    { name: "Fort Aguada", area: "Candolim", highlight: "1612 fortress with 4-story lighthouse and 79-lakh liter freshwater reservoir" },
+    { name: "Sinquerim Fort Sea Wall", area: "Sinquerim", highlight: "Low coastal sea-bastion wall extending right into crashing waves" },
+    { name: "Cabo de Rama Fort", area: "Canacona", highlight: "Ancient cliff fortress overlooking turquoise southern ocean waters" },
+    { name: "Reis Magos Fort", area: "Reis Magos", highlight: "Immaculately restored 1551 fortress guarding the mouth of Mandovi River" }
+  ],
+  offbeat: [
+    { name: "Parra Coconut Road", area: "Parra", highlight: "The 'Dear Zindagi' palm-tree lined country avenue" },
+    { name: "Houses of Goa Museum", area: "Salvador do Mundo", highlight: "Unique ship-shaped architectural museum celebrating heritage Goan home design" },
+    { name: "Museum of Goa (MOG)", area: "Pilerne", highlight: "Contemporary art space by Subodh Kerkar mapping Goa's rich maritime history" },
+    { name: "Aguada Central Jail Heritage Museum", area: "Sinquerim", highlight: "Historic coastal prison transformed into a state-of-the-art freedom struggle museum" },
+    { name: "Zuem Bridge & Divar Island", area: "Mandovi River", highlight: "Old-world river ferry crossing, untouched paddy fields & village calm" }
+  ]
+};
 
 // Practical Goa Travel Tips & Local Knowledge
 export const GOA_TRAVEL_TIPS = [

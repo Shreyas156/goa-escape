@@ -3,7 +3,16 @@
 // Interactive Search, Region/Category Filtering, Maps Integration
 // ===================================================
 
-import { GOA_SPOTS, GOA_ITINERARIES, GOA_TRAVEL_TIPS } from './data.js';
+import { 
+  GOA_SPOTS, 
+  GOA_ITINERARIES, 
+  GOA_TRAVEL_TIPS,
+  GOA_CAFES_DIRECTORY,
+  GOA_STAYS_DIRECTORY,
+  GOA_NIGHTLIFE_AND_CASINOS,
+  GOA_ACTIVITIES_AND_MARKETS,
+  GOA_SIGHTSEEING_DIRECTORY 
+} from './data.js';
 
 // Application State
 const state = {
@@ -13,6 +22,9 @@ const state = {
   sortBy: 'featured',
   savedSpotIds: JSON.parse(localStorage.getItem('goa_saved_spots') || '[]'),
   currentItineraryId: GOA_ITINERARIES[0].id,
+  selectedCafeArea: 'all',
+  activeStayType: 'hotels',
+  activeSightseeingTab: 'churches',
   theme: localStorage.getItem('goa_theme') || 'dark'
 };
 
@@ -37,6 +49,16 @@ const elements = {
   spotModal: document.getElementById('spotModal'),
   itinTabs: document.getElementById('itinTabs'),
   itinDisplay: document.getElementById('itinDisplay'),
+  cafesFilterPills: document.getElementById('cafesFilterPills'),
+  cafesGrid: document.getElementById('cafesGrid'),
+  casinosGrid: document.getElementById('casinosGrid'),
+  partiesGrid: document.getElementById('partiesGrid'),
+  staysTabs: document.getElementById('staysTabs'),
+  staysGrid: document.getElementById('staysGrid'),
+  watersportsGrid: document.getElementById('watersportsGrid'),
+  marketsGrid: document.getElementById('marketsGrid'),
+  sightseeingTabs: document.getElementById('sightseeingTabs'),
+  sightseeingGrid: document.getElementById('sightseeingGrid'),
   tipsGrid: document.getElementById('tipsGrid'),
   themeToggleBtn: document.getElementById('themeToggleBtn'),
   toast: document.getElementById('toast')
@@ -490,6 +512,255 @@ function renderTips() {
   `).join('');
 }
 
+// ================= Best Places to Eat & Cafes =================
+function renderCafes() {
+  if (!elements.cafesFilterPills || !elements.cafesGrid) return;
+
+  const areas = ['all', ...GOA_CAFES_DIRECTORY.map(c => c.area)];
+
+  // Render area filter pills
+  elements.cafesFilterPills.innerHTML = areas.map(area => {
+    const isAll = area === 'all';
+    const label = isAll ? '🌟 All Areas' : area;
+    const isActive = state.selectedCafeArea === area;
+    return `
+      <button class="directory-pill ${isActive ? 'active' : ''}" data-cafe-area="${area}">
+        ${label}
+      </button>
+    `;
+  }).join('');
+
+  elements.cafesFilterPills.querySelectorAll('[data-cafe-area]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      state.selectedCafeArea = btn.getAttribute('data-cafe-area');
+      renderCafes();
+    });
+  });
+
+  // Filter places
+  let filteredPlaces = [];
+  if (state.selectedCafeArea === 'all') {
+    GOA_CAFES_DIRECTORY.forEach(c => {
+      c.places.forEach(p => {
+        filteredPlaces.push({ ...p, area: c.area, icon: c.icon });
+      });
+    });
+  } else {
+    const found = GOA_CAFES_DIRECTORY.find(c => c.area === state.selectedCafeArea);
+    if (found) {
+      filteredPlaces = found.places.map(p => ({ ...p, area: found.area, icon: found.icon }));
+    }
+  }
+
+  elements.cafesGrid.innerHTML = filteredPlaces.map(cafe => `
+    <article class="directory-card cafe-card">
+      <div class="dir-card-header">
+        <span class="dir-area-badge">${cafe.icon} ${cafe.area}</span>
+        <a 
+          href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(cafe.query || cafe.name + ' Goa')}" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="btn-maps-sm"
+          title="Open in Google Maps"
+        >
+          🧭 Maps
+        </a>
+      </div>
+      <h3 class="dir-card-title">${cafe.name}</h3>
+      <p class="dir-card-desc">${cafe.highlight}</p>
+    </article>
+  `).join('');
+}
+
+// ================= Nightlife, Casinos & Hidden Parties =================
+function renderNightlifeAndCasinos() {
+  if (!elements.casinosGrid || !elements.partiesGrid) return;
+
+  // Render Casinos
+  elements.casinosGrid.innerHTML = GOA_NIGHTLIFE_AND_CASINOS.casinos.map(casino => `
+    <article class="directory-card casino-card">
+      <div class="dir-card-header">
+        <span class="casino-badge">🎰 Offshore Ship</span>
+        <a 
+          href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(casino.query || casino.name + ' Goa')}" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="btn-maps-sm"
+        >
+          🧭 Directions
+        </a>
+      </div>
+      <h3 class="dir-card-title">${casino.name}</h3>
+      <div class="dir-location">📍 ${casino.location}</div>
+      <p class="dir-card-desc">${casino.highlight}</p>
+      <div class="casino-entry-box">
+        <strong>🎟️ Entry & Chips:</strong> ${casino.entry}
+      </div>
+    </article>
+  `).join('');
+
+  // Render Best Parties & Hidden Venues combined
+  const partiesCombined = [
+    ...GOA_NIGHTLIFE_AND_CASINOS.partyPlaces.map(p => ({ ...p, tag: '🔥 Best Party Place' })),
+    ...GOA_NIGHTLIFE_AND_CASINOS.hiddenParties.map(p => ({ ...p, tag: '✨ Hidden Party Gem' }))
+  ];
+
+  elements.partiesGrid.innerHTML = partiesCombined.map(party => `
+    <article class="directory-card party-card">
+      <div class="dir-card-header">
+        <span class="party-tag">${party.tag}</span>
+        <a 
+          href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(party.name + ' ' + party.area + ' Goa')}" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="btn-maps-sm"
+        >
+          🧭 Maps
+        </a>
+      </div>
+      <h3 class="dir-card-title">${party.name}</h3>
+      <div class="dir-location">📍 ${party.area}</div>
+      <p class="dir-card-desc">${party.vibe}</p>
+    </article>
+  `).join('');
+}
+
+// ================= Where to Stay (Hotels & Hostels) =================
+function renderStays() {
+  if (!elements.staysTabs || !elements.staysGrid) return;
+
+  elements.staysTabs.innerHTML = `
+    <button class="itin-tab-btn ${state.activeStayType === 'hotels' ? 'active' : ''}" data-stay-tab="hotels">
+      🏨 Top Hotels & Resorts
+    </button>
+    <button class="itin-tab-btn ${state.activeStayType === 'hostels' ? 'active' : ''}" data-stay-tab="hostels">
+      🎒 Backpacker Hostels & Co-Living
+    </button>
+  `;
+
+  elements.staysTabs.querySelectorAll('[data-stay-tab]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      state.activeStayType = btn.getAttribute('data-stay-tab');
+      renderStays();
+    });
+  });
+
+  const staysList = GOA_STAYS_DIRECTORY[state.activeStayType] || GOA_STAYS_DIRECTORY.hotels;
+
+  elements.staysGrid.innerHTML = staysList.map(stay => `
+    <article class="directory-card stay-card">
+      <div class="dir-card-header">
+        <span class="dir-region-badge">${stay.region}</span>
+        <span class="rating-badge">★ ${stay.rating}</span>
+      </div>
+      <h3 class="dir-card-title">${stay.name}</h3>
+      <div class="stay-type-label">🏡 ${stay.type}</div>
+      <p class="dir-card-desc">${stay.highlight}</p>
+      <div style="margin-top: auto; padding-top: 12px;">
+        <a 
+          href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(stay.query || stay.name + ' ' + stay.region)}" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="btn-details"
+          style="display: flex; align-items: center; justify-content: center; gap: 6px; text-decoration: none;"
+        >
+          🔍 View Location on Maps
+        </a>
+      </div>
+    </article>
+  `).join('');
+}
+
+// ================= Water Sports & Markets =================
+function renderActivitiesAndMarkets() {
+  if (!elements.watersportsGrid || !elements.marketsGrid) return;
+
+  elements.watersportsGrid.innerHTML = GOA_ACTIVITIES_AND_MARKETS.waterSports.map(w => `
+    <article class="directory-card activity-card">
+      <div class="dir-card-header">
+        <span class="region-tag north">${w.region}</span>
+        <a 
+          href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(w.beach + ' Water Sports Goa')}" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="btn-maps-sm"
+        >
+          🧭 Maps
+        </a>
+      </div>
+      <h3 class="dir-card-title">🏄 ${w.beach}</h3>
+      <div class="activity-sports-list">
+        <strong>Available Sports:</strong> ${w.sports}
+      </div>
+      <p class="dir-card-desc">${w.highlight}</p>
+    </article>
+  `).join('');
+
+  elements.marketsGrid.innerHTML = GOA_ACTIVITIES_AND_MARKETS.fleaMarkets.map(m => `
+    <article class="directory-card market-card">
+      <div class="dir-card-header">
+        <span class="market-badge">🛍️ Flea Market</span>
+        <a 
+          href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(m.name + ' ' + m.location)}" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="btn-maps-sm"
+        >
+          🧭 Maps
+        </a>
+      </div>
+      <h3 class="dir-card-title">${m.name}</h3>
+      <div class="dir-location">📍 ${m.location}</div>
+      <div class="market-time-badge">⏰ ${m.timing}</div>
+      <p class="dir-card-desc">${m.highlight}</p>
+    </article>
+  `).join('');
+}
+
+// ================= Sightseeing Beyond Beaches =================
+function renderSightseeing() {
+  if (!elements.sightseeingTabs || !elements.sightseeingGrid) return;
+
+  const tabs = [
+    { id: 'churches', label: '⛪ Historic Churches' },
+    { id: 'forts', label: '🏰 Ancient Forts' },
+    { id: 'offbeat', label: '🎨 Offbeat & Museums' }
+  ];
+
+  elements.sightseeingTabs.innerHTML = tabs.map(t => `
+    <button class="itin-tab-btn ${state.activeSightseeingTab === t.id ? 'active' : ''}" data-sightseeing-tab="${t.id}">
+      ${t.label}
+    </button>
+  `).join('');
+
+  elements.sightseeingTabs.querySelectorAll('[data-sightseeing-tab]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      state.activeSightseeingTab = btn.getAttribute('data-sightseeing-tab');
+      renderSightseeing();
+    });
+  });
+
+  const list = GOA_SIGHTSEEING_DIRECTORY[state.activeSightseeingTab] || GOA_SIGHTSEEING_DIRECTORY.churches;
+
+  elements.sightseeingGrid.innerHTML = list.map(item => `
+    <article class="directory-card sight-card">
+      <div class="dir-card-header">
+        <span class="dir-area-badge">📍 ${item.area}</span>
+        <a 
+          href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(item.name + ' Goa')}" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="btn-maps-sm"
+        >
+          🧭 Directions
+        </a>
+      </div>
+      <h3 class="dir-card-title">${item.name}</h3>
+      <p class="dir-card-desc">${item.highlight}</p>
+    </article>
+  `).join('');
+}
+
 // ================= UI Filter Helpers =================
 function updatePillUI() {
   elements.categoryPills.forEach(pill => {
@@ -634,6 +905,11 @@ function initApp() {
   updateTripCounter();
   renderSpots();
   renderItineraries();
+  renderCafes();
+  renderNightlifeAndCasinos();
+  renderStays();
+  renderActivitiesAndMarkets();
+  renderSightseeing();
   renderTips();
   initEventListeners();
 }
