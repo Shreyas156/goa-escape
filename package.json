@@ -1,7 +1,7 @@
 {
-  "name": "goa-escape-travel-guide",
+  "name": "goa-escape",
   "version": "1.0.0",
-  "description": "Viral travel website for North and South Goa featuring Google Maps navigation, photo spots, and itineraries.",
+  "description": "Goa Escape — Curated viral travel guide for North and South Goa featuring Google Maps navigation, photo spots, clubs, pubs, and ready itineraries.",
   "main": "index.html",
   "type": "module",
   "scripts": {

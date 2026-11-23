@@ -1,4 +1,4 @@
-# 🌴 GOA ESCAPE — The Ultimate North & South Goa Travel Website
+# 🌴 Goa Escape — The Ultimate North & South Goa Travel Website
 
 A modern, aesthetic, tropical web guide curated with the **top viral, Instagram-famous, and Google Maps landmarks across North and South Goa**.
 
