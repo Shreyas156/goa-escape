@@ -214,6 +214,10 @@ body::after {
   box-shadow: 0 6px 20px rgba(2, 132, 199, 0.5);
 }
 
+.trip-btn-text-short {
+  display: none;
+}
+
 .trip-count-badge {
   background: #f97316;
   color: white;
@@ -406,6 +410,12 @@ body::after {
   transition: var(--transition);
 }
 
+.region-sub {
+  font-size: 11.5px;
+  font-weight: 500;
+  opacity: 0.8;
+}
+
 .region-btn:hover {
   color: var(--text-main);
   background: rgba(255, 255, 255, 0.05);
@@ -500,7 +510,7 @@ body::after {
 /* ================= Spots Card Grid ================= */
 .spots-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr));
   gap: 28px;
   margin-bottom: 60px;
 }
@@ -1302,12 +1312,505 @@ body::after {
 }
 
 /* ================= Responsive Queries ================= */
+
+@media (max-width: 992px) {
+  .hero-title {
+    font-size: 42px;
+  }
+  .spots-grid {
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+    gap: 20px;
+  }
+  .filter-hub {
+    padding: 20px;
+  }
+}
+
 @media (max-width: 768px) {
-  .hero { padding: 40px 0 30px 0; }
-  .region-toggle-group { grid-template-columns: 1fr; }
-  .spots-grid { grid-template-columns: 1fr; }
-  .modal-grid { grid-template-columns: 1fr; }
-  .modal-body { padding: 20px; }
-  .timeline-item { grid-template-columns: 1fr; }
-  .nav-link { display: none; }
+  /* Container & Navbar */
+  .container {
+    padding: 0 16px;
+  }
+
+  .navbar {
+    padding: 10px 0;
+  }
+
+  .nav-container {
+    gap: 8px;
+  }
+
+  .nav-link {
+    display: none;
+  }
+
+  .brand-text {
+    font-size: 19px;
+  }
+
+  .brand-badge {
+    display: none;
+  }
+
+  .btn-trip {
+    padding: 7px 12px;
+    font-size: 13px;
+    gap: 6px;
+  }
+
+  .theme-toggle-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 15px;
+  }
+
+  /* Hero Section */
+  .hero {
+    padding: 34px 0 20px 0;
+  }
+
+  .hero-tag {
+    font-size: 11px;
+    padding: 5px 12px;
+    margin-bottom: 12px;
+  }
+
+  .hero-title {
+    font-size: clamp(26px, 7.2vw, 36px);
+    line-height: 1.15;
+    letter-spacing: -0.5px;
+    margin-bottom: 12px;
+  }
+
+  .hero-subtitle {
+    font-size: 13.5px;
+    line-height: 1.55;
+    margin-bottom: 22px;
+    padding: 0 4px;
+  }
+
+  .hero-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px 8px;
+    margin-bottom: 24px;
+  }
+
+  .stat-item {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    padding: 10px 8px;
+    border-radius: 12px;
+  }
+
+  .stat-num {
+    font-size: 20px;
+  }
+
+  .stat-label {
+    font-size: 10.5px;
+    letter-spacing: 0.3px;
+  }
+
+  /* Filter Hub */
+  .filter-hub {
+    padding: 14px 12px;
+    border-radius: 16px;
+    margin-bottom: 22px;
+  }
+
+  .search-bar-wrap {
+    margin-bottom: 12px;
+  }
+
+  .search-input {
+    padding: 11px 14px 11px 40px;
+    font-size: 13.5px;
+    border-radius: 12px;
+  }
+
+  .search-icon {
+    left: 12px;
+    font-size: 16px;
+  }
+
+  /* Region Switcher: Compact 3-column tabs */
+  .region-toggle-group {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4px;
+    padding: 4px;
+    margin-bottom: 12px;
+    border-radius: 12px;
+  }
+
+  .region-btn {
+    padding: 8px 4px;
+    font-size: 12px;
+    border-radius: 8px;
+    flex-direction: column;
+    gap: 2px;
+    text-align: center;
+  }
+
+  .region-sub {
+    font-size: 10px;
+    opacity: 0.85;
+    font-weight: 500;
+  }
+
+  /* Category Filter Pills */
+  .category-pills-wrap {
+    padding: 2px 2px 6px 2px;
+    gap: 6px;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+  }
+
+  .category-pill {
+    padding: 7px 12px;
+    font-size: 12px;
+    scroll-snap-align: start;
+    flex-shrink: 0;
+  }
+
+  /* Results Header */
+  .results-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+
+  .results-count {
+    font-size: 13px;
+    text-align: left;
+  }
+
+  .sort-select {
+    width: 100%;
+    padding: 9px 12px;
+    font-size: 13px;
+  }
+
+  /* Spots Grid & Cards */
+  .spots-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-bottom: 36px;
+  }
+
+  .spot-card {
+    border-radius: 16px;
+  }
+
+  .card-media-wrap {
+    height: 195px;
+  }
+
+  .card-badges-row {
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    align-items: flex-start;
+  }
+
+  .card-media-bottom {
+    bottom: 10px;
+    left: 10px;
+  }
+
+  .card-content {
+    padding: 14px 14px 16px 14px;
+  }
+
+  .spot-name {
+    font-size: 17.5px;
+  }
+
+  .spot-tagline {
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
+
+  .spot-desc {
+    font-size: 13px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    -webkit-line-clamp: 2;
+  }
+
+  .reel-tip-box {
+    font-size: 11.5px;
+    padding: 8px 10px;
+    margin-bottom: 10px;
+    gap: 6px;
+  }
+
+  .spot-meta-row {
+    font-size: 11.5px;
+    gap: 5px;
+    padding-top: 10px;
+  }
+
+  .meta-item.meta-fee {
+    font-size: 11.5px;
+    padding: 5px 8px;
+  }
+
+  .card-actions {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-top: 12px;
+  }
+
+  .btn-maps,
+  .btn-details {
+    padding: 9px 10px;
+    font-size: 12.5px;
+    justify-content: center;
+    text-align: center;
+  }
+
+  /* Curated Itineraries Section */
+  .itineraries-section {
+    padding: 36px 0;
+  }
+
+  .section-head {
+    margin-bottom: 18px;
+  }
+
+  .section-title {
+    font-size: 22px;
+  }
+
+  .section-desc {
+    font-size: 13px;
+  }
+
+  .itin-tabs {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    justify-content: flex-start;
+    padding-bottom: 6px;
+    gap: 6px;
+    margin-bottom: 16px;
+  }
+
+  .itin-tab-btn {
+    white-space: nowrap;
+    flex-shrink: 0;
+    font-size: 12.5px;
+    padding: 8px 12px;
+  }
+
+  .itin-card {
+    padding: 16px 12px;
+    border-radius: 16px;
+  }
+
+  .itin-header {
+    padding-bottom: 12px;
+    margin-bottom: 16px;
+  }
+
+  .itin-title {
+    font-size: 18px;
+  }
+
+  .itin-subtitle {
+    font-size: 12.5px;
+  }
+
+  .itin-badges {
+    gap: 5px;
+  }
+
+  .itin-badge {
+    font-size: 11px;
+    padding: 4px 7px;
+  }
+
+  .day-box {
+    border-radius: 12px;
+    margin-bottom: 10px;
+  }
+
+  .day-header {
+    padding: 10px 12px;
+    font-size: 13.5px;
+  }
+
+  .timeline {
+    padding: 10px 12px;
+    gap: 10px;
+  }
+
+  .timeline-item {
+    grid-template-columns: 70px 1fr;
+    gap: 8px;
+    font-size: 12.5px;
+  }
+
+  .timeline-time {
+    font-size: 10.5px;
+    padding: 2px 5px;
+  }
+
+  /* Travel Hacks Section */
+  .tips-section {
+    padding: 36px 0;
+  }
+
+  .tips-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .tip-card {
+    padding: 14px 12px;
+    border-radius: 14px;
+  }
+
+  .tip-icon {
+    font-size: 24px;
+    margin-bottom: 6px;
+  }
+
+  .tip-title {
+    font-size: 15px;
+    margin-bottom: 4px;
+  }
+
+  .tip-detail {
+    font-size: 12.5px;
+    line-height: 1.5;
+  }
+
+  /* Spot Modal (Mobile Bottom-Sheet Style) */
+  .modal-backdrop {
+    padding: 0;
+    align-items: flex-end;
+  }
+
+  .spot-modal {
+    border-radius: 20px 20px 0 0;
+    max-height: 90vh;
+    width: 100%;
+    margin: 0;
+  }
+
+  .modal-hero {
+    height: 190px;
+  }
+
+  .modal-body {
+    padding: 16px 14px 24px 14px;
+  }
+
+  .modal-title {
+    font-size: 19px;
+    margin-bottom: 2px;
+  }
+
+  .modal-tagline {
+    font-size: 12.5px;
+    margin-bottom: 10px;
+  }
+
+  .modal-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    margin: 14px 0;
+  }
+
+  .modal-info-card {
+    padding: 9px 11px;
+    border-radius: 10px;
+  }
+
+  .modal-info-label {
+    font-size: 10.5px;
+  }
+
+  .modal-info-val {
+    font-size: 13px;
+  }
+
+  .modal-actions {
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 16px;
+  }
+
+  .modal-actions .btn-maps,
+  .modal-actions .btn-trip {
+    width: 100%;
+    padding: 11px;
+    font-size: 13.5px;
+    justify-content: center;
+  }
+
+  /* Drawer (Saved Trip) */
+  .drawer {
+    width: 100%;
+    max-width: 100%;
+    right: -100%;
+    height: 100dvh;
+  }
+
+  .drawer-header {
+    padding: 14px 16px;
+  }
+
+  .drawer-body {
+    padding: 14px 16px;
+  }
+
+  .drawer-footer {
+    padding: 12px 16px;
+  }
+
+  /* Toast Notification */
+  .toast {
+    bottom: 14px;
+    right: 14px;
+    left: 14px;
+    text-align: center;
+    font-size: 12.5px;
+    padding: 9px 14px;
+  }
+}
+
+@media (max-width: 420px) {
+  .brand-text {
+    font-size: 16.5px;
+  }
+
+  .trip-btn-text-full {
+    display: none;
+  }
+
+  .trip-btn-text-short {
+    display: inline;
+  }
+
+  .hero-title {
+    font-size: 25px;
+  }
+
+  .hero-stats {
+    gap: 6px;
+  }
+
+  .card-media-wrap {
+    height: 175px;
+  }
+
+  .timeline-item {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
 }
