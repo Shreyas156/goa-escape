@@ -84,7 +84,8 @@ body {
   background-color: var(--bg-primary);
   color: var(--text-main);
   line-height: 1.6;
-  overflow-x: hidden;
+  /* NOTE: overflow-x: hidden is intentionally NOT on body — it breaks position:fixed on iOS Safari/Chrome.
+     Horizontal overflow is controlled via html and individual containers instead. */
   max-width: 100%;
   min-height: 100vh;
 }
@@ -301,17 +302,15 @@ body::after {
   z-index: 9999;
   display: flex;
   flex-direction: column;
-  transform: translateX(100%);
-  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.3s ease;
-  overflow: hidden;
-  visibility: hidden;
-  pointer-events: none;
+  transform: translateX(110%);
+  transition: transform 0.32s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
 }
 
 .mobile-menu-drawer.active {
   transform: translateX(0) !important;
-  visibility: visible !important;
-  pointer-events: auto !important;
 }
 
 .mobile-menu-header {
@@ -2114,7 +2113,11 @@ body::after {
   }
 
   .nav-controls .theme-toggle-btn {
-    display: none;
+    display: flex;
+    width: 34px;
+    height: 34px;
+    font-size: 15px;
+    padding: 0;
   }
 
   .mobile-theme-btn {
