@@ -59,9 +59,108 @@
         <button id="themeToggleBtn" class="theme-toggle-btn" title="Toggle Theme (Dark / Sunset / Light)">
           🌙
         </button>
+
+        <!-- Mobile Hamburger Toggle Button -->
+        <button id="hamburgerBtn" class="hamburger-btn" aria-label="Open Navigation Menu" aria-expanded="false">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
       </div>
     </div>
   </nav>
+
+  <!-- Mobile Hamburger Menu Overlay & Drawer -->
+  <div id="mobileMenuBackdrop" class="mobile-menu-backdrop"></div>
+  <aside id="mobileMenuDrawer" class="mobile-menu-drawer" aria-hidden="true">
+    <div class="mobile-menu-header">
+      <div class="mobile-menu-brand">
+        <span class="brand-icon">🌴</span>
+        <div>
+          <div class="mobile-brand-title">Goa Escape</div>
+          <span class="brand-badge">2025 Edition</span>
+        </div>
+      </div>
+      <button id="btnCloseMobileMenu" class="btn-close-menu" aria-label="Close navigation menu">&times;</button>
+    </div>
+
+    <div class="mobile-menu-body">
+      <div class="mobile-nav-label">Explore Goa</div>
+      <nav class="mobile-nav-list">
+        <a href="#explore" class="mobile-nav-item">
+          <span class="mobile-nav-icon">📍</span>
+          <div class="mobile-nav-info">
+            <span class="mobile-nav-title">Spots</span>
+            <span class="mobile-nav-sub">Curated reels & iconic landmarks</span>
+          </div>
+          <span class="mobile-nav-chevron">›</span>
+        </a>
+        <a href="#itineraries" class="mobile-nav-item">
+          <span class="mobile-nav-icon">🗓️</span>
+          <div class="mobile-nav-info">
+            <span class="mobile-nav-title">5-Day Plan</span>
+            <span class="mobile-nav-sub">Hour-by-hour master route</span>
+          </div>
+          <span class="mobile-nav-chevron">›</span>
+        </a>
+        <a href="#cafes" class="mobile-nav-item">
+          <span class="mobile-nav-icon">☕</span>
+          <div class="mobile-nav-info">
+            <span class="mobile-nav-title">Cafes & Dining</span>
+            <span class="mobile-nav-sub">Anjuna, Baga, Vagator & Sundowners</span>
+          </div>
+          <span class="mobile-nav-chevron">›</span>
+        </a>
+        <a href="#nightlife-casinos" class="mobile-nav-item">
+          <span class="mobile-nav-icon">🎰</span>
+          <div class="mobile-nav-info">
+            <span class="mobile-nav-title">Casinos & Parties</span>
+            <span class="mobile-nav-sub">Offshore luxury & hidden clubs</span>
+          </div>
+          <span class="mobile-nav-chevron">›</span>
+        </a>
+        <a href="#stays" class="mobile-nav-item">
+          <span class="mobile-nav-icon">🏨</span>
+          <div class="mobile-nav-info">
+            <span class="mobile-nav-title">Stays</span>
+            <span class="mobile-nav-sub">Top resorts & backpacker hostels</span>
+          </div>
+          <span class="mobile-nav-chevron">›</span>
+        </a>
+        <a href="#activities" class="mobile-nav-item">
+          <span class="mobile-nav-icon">🏄</span>
+          <div class="mobile-nav-info">
+            <span class="mobile-nav-title">Activities & Flea Markets</span>
+            <span class="mobile-nav-sub">Water sports & night bazaars</span>
+          </div>
+          <span class="mobile-nav-chevron">›</span>
+        </a>
+        <a href="#sightseeing" class="mobile-nav-item">
+          <span class="mobile-nav-icon">⛪</span>
+          <div class="mobile-nav-info">
+            <span class="mobile-nav-title">Sightseeing Beyond Beaches</span>
+            <span class="mobile-nav-sub">Churches, forts & cultural spots</span>
+          </div>
+          <span class="mobile-nav-chevron">›</span>
+        </a>
+        <a href="#tips" class="mobile-nav-item">
+          <span class="mobile-nav-icon">💡</span>
+          <div class="mobile-nav-info">
+            <span class="mobile-nav-title">Travel Hacks</span>
+            <span class="mobile-nav-sub">Scooters, taxi apps, police & weather</span>
+          </div>
+          <span class="mobile-nav-chevron">›</span>
+        </a>
+      </nav>
+
+      <div class="mobile-menu-footer">
+        <button id="btnMobileTripOpen" class="btn-trip mobile-full-trip-btn">
+          <span>🎒 My Saved Trip List</span>
+          <span id="tripCountBadgeMobile" class="trip-count-badge">0</span>
+        </button>
+      </div>
+    </div>
+  </aside>
 
   <!-- Hero Section -->
   <header class="hero">

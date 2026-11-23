@@ -61,7 +61,13 @@ const elements = {
   sightseeingGrid: document.getElementById('sightseeingGrid'),
   tipsGrid: document.getElementById('tipsGrid'),
   themeToggleBtn: document.getElementById('themeToggleBtn'),
-  toast: document.getElementById('toast')
+  toast: document.getElementById('toast'),
+  hamburgerBtn: document.getElementById('hamburgerBtn'),
+  mobileMenuDrawer: document.getElementById('mobileMenuDrawer'),
+  mobileMenuBackdrop: document.getElementById('mobileMenuBackdrop'),
+  btnCloseMobileMenu: document.getElementById('btnCloseMobileMenu'),
+  tripCountBadgeMobile: document.getElementById('tripCountBadgeMobile'),
+  btnMobileTripOpen: document.getElementById('btnMobileTripOpen')
 };
 
 // ================= Theme Management =================
@@ -285,6 +291,9 @@ function toggleSaveSpot(spotId) {
 function updateTripCounter() {
   const count = state.savedSpotIds.length;
   elements.tripCountBadge.textContent = count;
+  if (elements.tripCountBadgeMobile) {
+    elements.tripCountBadgeMobile.textContent = count;
+  }
 }
 
 // ================= Saved Trip Drawer =================
@@ -858,11 +867,67 @@ function initEventListeners() {
     }
   });
 
+  // Mobile Hamburger Navigation Drawer
+  const openMobileMenu = () => {
+    if (!elements.mobileMenuDrawer) return;
+    elements.mobileMenuDrawer.classList.add('active');
+    elements.mobileMenuBackdrop.classList.add('active');
+    elements.hamburgerBtn.classList.add('active');
+    elements.hamburgerBtn.setAttribute('aria-expanded', 'true');
+    elements.mobileMenuDrawer.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  };
+
+  const closeMobileMenu = () => {
+    if (!elements.mobileMenuDrawer) return;
+    elements.mobileMenuDrawer.classList.remove('active');
+    elements.mobileMenuBackdrop.classList.remove('active');
+    elements.hamburgerBtn.classList.remove('active');
+    elements.hamburgerBtn.setAttribute('aria-expanded', 'false');
+    elements.mobileMenuDrawer.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  };
+
+  if (elements.hamburgerBtn) {
+    elements.hamburgerBtn.addEventListener('click', () => {
+      if (elements.mobileMenuDrawer.classList.contains('active')) {
+        closeMobileMenu();
+      } else {
+        openMobileMenu();
+      }
+    });
+  }
+
+  if (elements.btnCloseMobileMenu) {
+    elements.btnCloseMobileMenu.addEventListener('click', closeMobileMenu);
+  }
+
+  if (elements.mobileMenuBackdrop) {
+    elements.mobileMenuBackdrop.addEventListener('click', closeMobileMenu);
+  }
+
+  // Click on any link in the mobile drawer closes the drawer smoothly
+  document.querySelectorAll('.mobile-nav-item').forEach(link => {
+    link.addEventListener('click', () => {
+      closeMobileMenu();
+    });
+  });
+
+  if (elements.btnMobileTripOpen) {
+    elements.btnMobileTripOpen.addEventListener('click', () => {
+      closeMobileMenu();
+      if (elements.btnOpenTrip) {
+        elements.btnOpenTrip.click();
+      }
+    });
+  }
+
   // Keyboard Escape
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
       closeSpotModal();
       closeDrawer();
+      closeMobileMenu();
     }
   });
 
