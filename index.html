@@ -25,7 +25,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   
   <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="css/style.css?v=2.5">
+  <link rel="stylesheet" href="css/style.css?v=2.6">
 </head>
 <body>
 
@@ -61,7 +61,7 @@
         </button>
 
         <!-- Mobile Hamburger Toggle Button -->
-        <button id="hamburgerBtn" class="hamburger-btn" aria-label="Open Navigation Menu" aria-expanded="false">
+        <button id="hamburgerBtn" class="hamburger-btn" aria-label="Open Navigation Menu" aria-expanded="false" onclick="window.toggleMobileMenu && window.toggleMobileMenu(event)">
           <span class="hamburger-bar"></span>
           <span class="hamburger-bar"></span>
           <span class="hamburger-bar"></span>
@@ -71,7 +71,7 @@
   </nav>
 
   <!-- Mobile Hamburger Menu Overlay & Drawer -->
-  <div id="mobileMenuBackdrop" class="mobile-menu-backdrop"></div>
+  <div id="mobileMenuBackdrop" class="mobile-menu-backdrop" onclick="window.closeMobileMenu && window.closeMobileMenu(event)"></div>
   <aside id="mobileMenuDrawer" class="mobile-menu-drawer" aria-hidden="true">
     <div class="mobile-menu-header">
       <div class="mobile-menu-brand">
@@ -85,7 +85,7 @@
         <button id="themeToggleBtnMobile" class="theme-toggle-btn mobile-theme-btn" title="Toggle Theme (Dark / Sunset / Light)">
           🌙
         </button>
-        <button id="btnCloseMobileMenu" class="btn-close-menu" aria-label="Close navigation menu">&times;</button>
+        <button id="btnCloseMobileMenu" class="btn-close-menu" aria-label="Close navigation menu" onclick="window.closeMobileMenu && window.closeMobileMenu(event)">&times;</button>
       </div>
     </div>
 
@@ -529,6 +529,6 @@
   <div class="toast" id="toast">Spot added to your trip!</div>
 
   <!-- Application Script (ES Module) -->
-  <script type="module" src="js/app.js"></script>
+  <script type="module" src="js/app.js?v=2.6"></script>
 </body>
 </html>
