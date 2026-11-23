@@ -61,6 +61,7 @@ const elements = {
   sightseeingGrid: document.getElementById('sightseeingGrid'),
   tipsGrid: document.getElementById('tipsGrid'),
   themeToggleBtn: document.getElementById('themeToggleBtn'),
+  themeToggleBtnMobile: document.getElementById('themeToggleBtnMobile'),
   toast: document.getElementById('toast'),
   hamburgerBtn: document.getElementById('hamburgerBtn'),
   mobileMenuDrawer: document.getElementById('mobileMenuDrawer'),
@@ -933,6 +934,9 @@ function initEventListeners() {
 
   // Theme Toggle Button
   elements.themeToggleBtn.addEventListener('click', cycleTheme);
+  if (elements.themeToggleBtnMobile) {
+    elements.themeToggleBtnMobile.addEventListener('click', cycleTheme);
+  }
 
   // Return to Top (Coconut Buttons)
   const scrollToTop = () => {
