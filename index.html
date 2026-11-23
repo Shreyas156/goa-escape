@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Goa Escape — Best Spots in North & South Goa | Viral Travel Guide & Maps</title>
+  
+  <!-- Primary Meta Tags -->
+  <meta name="title" content="Goa Escape — Best Spots in North & South Goa | Viral Travel Guide & Maps">
+  <meta name="description" content="Discover the most famous, Instagram-viral, and hidden gems across North & South Goa. Direct Google Maps navigation, photo angles, timings, insider tips, and ready-made itineraries.">
+  <meta name="theme-color" content="#0a1120">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Goa Escape — Ultimate Travel Guide with Google Maps & Viral Spots">
+  <meta property="og:description" content="Explore Dil Chahta Hai Fort, Parra Road, Cola Lagoon, Dudhsagar, and hidden gems. Direct Google Maps navigation for every spot.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=1200&q=80">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="#" class="brand">
+        <span class="brand-icon">🌴</span>
+        <span class="brand-text">GOA ESCAPE</span>
+        <span class="brand-badge">2025 Edition</span>
+      </a>
+
+      <div class="nav-actions">
+        <a href="#explore" class="nav-link">Explore Spots</a>
+        <a href="#itineraries" class="nav-link">Itineraries</a>
+        <a href="#tips" class="nav-link">Travel Hacks</a>
+        
+        <button id="btnOpenTrip" class="btn-trip" title="View Saved Bucket List">
+          <span>🎒 My Goa Trip</span>
+          <span id="tripCountBadge" class="trip-count-badge">0</span>
+        </button>
+
+        <button id="themeToggleBtn" class="theme-toggle-btn" title="Toggle Theme (Dark / Sunset / Light)">
+          🌙
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="container">
+      <div class="hero-tag">
+        <span>✨ The Viral Goa Bucket List</span>
+      </div>
+      <h1 class="hero-title">
+        Discover <span class="gradient-text">North & South Goa's</span><br>Most Iconic & Viral Spots
+      </h1>
+      <p class="hero-subtitle">
+        Curated from trending social media reels, local traveler secrets, and Google Maps landmarks. Get instant 1-click GPS navigation, photo angles, timings, and custom itineraries for your trip.
+      </p>
+
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-num" id="totalSpotsCount">24+</span>
+          <span class="stat-label">Curated Spots</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">100%</span>
+          <span class="stat-label">Google Maps Direct Links</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">3 Ready</span>
+          <span class="stat-label">Multi-Day Itineraries</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">North & South</span>
+          <span class="stat-label">Complete Coverage</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Explore Section -->
+  <main class="container" id="explore">
+    
+    <!-- Filter & Search Hub -->
+    <section class="filter-hub">
+      <!-- Search Input -->
+      <div class="search-bar-wrap">
+        <div class="search-input-box">
+          <span class="search-icon">🔍</span>
+          <input 
+            type="text" 
+            id="searchInput" 
+            class="search-input" 
+            placeholder="Search by spot name, area (Vagator, Panjim, Canacona), or vibe (sunset, waterfall, cafe)..."
+          >
+        </div>
+      </div>
+
+      <!-- North vs South Region Switcher -->
+      <div class="region-toggle-group">
+        <button class="region-btn active" data-region="all">
+          <span>🗺️ Entire Goa</span>
+        </button>
+        <button class="region-btn" data-region="north">
+          <span>⚡ North Goa (Party, Forts & Cafes)</span>
+        </button>
+        <button class="region-btn" data-region="south">
+          <span>🌊 South Goa (Peace, Lagoons & Nature)</span>
+        </button>
+      </div>
+
+      <!-- Category Filter Pills -->
+      <div class="category-pills-wrap" id="categoryPills">
+        <button class="category-pill active" data-cat="all">🌟 All Categories</button>
+        <button class="category-pill" data-cat="clubs">🪩 Clubs & Pubs</button>
+        <button class="category-pill" data-cat="insta-famous">📸 Viral Reel Spots</button>
+        <button class="category-pill" data-cat="beaches">🏖️ Iconic Beaches</button>
+        <button class="category-pill" data-cat="forts">🏰 Ancient Forts</button>
+        <button class="category-pill" data-cat="waterfalls">🌊 Waterfalls & Springs</button>
+        <button class="category-pill" data-cat="sunset">🌅 Sunset Clifftops</button>
+        <button class="category-pill" data-cat="cafes">🍹 Cafes & Sundowners</button>
+        <button class="category-pill" data-cat="heritage">⛪ Portuguese Heritage</button>
+        <button class="category-pill" data-cat="hidden-gems">💎 Untouched Hidden Gems</button>
+      </div>
+    </section>
+
+    <!-- Results Header -->
+    <div class="results-header">
+      <div class="results-count">
+        Showing <strong id="visibleSpotsCount">0</strong> destination spots
+      </div>
+      <div>
+        <select id="sortSelect" class="sort-select">
+          <option value="featured">✨ Featured & Viral First</option>
+          <option value="rating">⭐ Highest Rated</option>
+          <option value="name">🔤 Alphabetical (A-Z)</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Spots Grid -->
+    <div class="spots-grid" id="spotsGrid">
+      <!-- Injected via JavaScript from data.js -->
+    </div>
+
+  </main>
+
+  <!-- Curated Itineraries Section -->
+  <section class="itineraries-section" id="itineraries">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-tag">✈️ Ready-Made Travel Plans</div>
+        <h2 class="section-title">Curated Goa Itineraries</h2>
+        <p class="section-desc">
+          Crafted to optimize your driving routes, avoid traffic jams, and put you at the right spot during golden hour.
+        </p>
+      </div>
+
+      <!-- Itinerary Tabs -->
+      <div class="itin-tabs" id="itinTabs">
+        <!-- Rendered by JS -->
+      </div>
+
+      <!-- Itinerary Card Display -->
+      <div class="itin-card" id="itinDisplay">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Goa Travel Tips Section -->
+  <section class="tips-section" id="tips">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-tag">💡 Local Secrets</div>
+        <h2 class="section-title">Goa Travel Hacks & Essentials</h2>
+        <p class="section-desc">
+          Everything you need to know about scooter rentals, taxi apps, airport choices, and seasonal weather.
+        </p>
+      </div>
+
+      <div class="tips-grid" id="tipsGrid">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-brand">🌴 GOA ESCAPE</div>
+      <p class="footer-text">
+        The ultimate modern guide to discovering North and South Goa. Designed with love for road-trippers, reel creators, and peace seekers.
+      </p>
+      <p style="font-size: 13px; color: var(--text-dim); margin-top: 12px;">
+        🚀 Optimized for instant 1-click deployment on <strong>Vercel</strong>.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Saved Itinerary / Bucket List Drawer -->
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+  <aside class="drawer" id="tripDrawer">
+    <div class="drawer-header">
+      <h3 class="drawer-title">🎒 My Goa Trip Planner</h3>
+      <button class="btn-close" id="btnCloseDrawer">✕</button>
+    </div>
+    <div class="drawer-body" id="drawerBody">
+      <!-- Injected via JS -->
+    </div>
+    <div class="drawer-footer">
+      <button class="btn-maps" id="btnOpenAllInMaps" style="width: 100%;">
+        🗺️ Open Route in Google Maps
+      </button>
+      <button class="btn-details" id="btnClearTrip" style="width: 100%;">
+        🗑️ Clear All Saved Spots
+      </button>
+    </div>
+  </aside>
+
+  <!-- Spot Details Modal -->
+  <div class="modal-backdrop" id="spotModalBackdrop">
+    <div class="spot-modal" id="spotModal">
+      <!-- Content Injected via JS -->
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast">Spot added to your trip!</div>
+
+  <!-- Application Script (ES Module) -->
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

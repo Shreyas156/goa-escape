@@ -1,0 +1,23 @@
+{
+  "name": "goa-escape-travel-guide",
+  "version": "1.0.0",
+  "description": "Viral travel website for North and South Goa featuring Google Maps navigation, photo spots, and itineraries.",
+  "main": "index.html",
+  "type": "module",
+  "scripts": {
+    "start": "npx serve .",
+    "deploy": "vercel --prod"
+  },
+  "keywords": [
+    "goa",
+    "travel",
+    "north-goa",
+    "south-goa",
+    "google-maps",
+    "itinerary",
+    "tourism",
+    "vercel"
+  ],
+  "author": "Shreyas",
+  "license": "MIT"
+}
