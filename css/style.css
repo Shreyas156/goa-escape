@@ -172,25 +172,41 @@ body::after {
   letter-spacing: 0.5px;
 }
 
-.nav-actions {
+.nav-links-scroll {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 4px;
 }
 
 .nav-link {
   color: var(--text-muted);
   text-decoration: none;
-  font-size: 14px;
+  font-size: 13.5px;
   font-weight: 600;
-  padding: 8px 14px;
+  padding: 6px 12px;
   border-radius: 8px;
   transition: var(--transition);
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
 }
 
 .nav-link:hover {
   color: var(--text-main);
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.nav-link.active {
+  color: #38bdf8;
+  background: rgba(56, 189, 248, 0.12);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+}
+
+.nav-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
 }
 
 .btn-trip {
@@ -1267,14 +1283,25 @@ body::after {
 .footer {
   border-top: 1px solid var(--border-color);
   background: var(--bg-secondary);
-  padding: 40px 0 30px 0;
+  padding: 44px 0 36px 0;
   margin-top: 60px;
-  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  text-align: left;
+}
+
+.footer-left {
+  max-width: 620px;
 }
 
 .footer-brand {
   font-family: 'Outfit', sans-serif;
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 800;
   margin-bottom: 8px;
   color: var(--text-main);
@@ -1283,15 +1310,27 @@ body::after {
 .footer-text {
   color: var(--text-dim);
   font-size: 14px;
-  max-width: 600px;
-  margin: 0 auto 16px auto;
+  line-height: 1.6;
+  margin-bottom: 6px;
 }
 
-/* Return to Top Coconut Buttons */
-.footer-top-wrap {
-  margin: 20px 0 16px 0;
+.footer-subtext {
+  font-size: 13px;
+  color: var(--text-dim);
+  margin-top: 6px;
+}
+
+/* Return to Top Coconut Button on the Right Side */
+.footer-right {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.footer-top-wrap {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .btn-coconut-top {
@@ -1311,6 +1350,7 @@ body::after {
   cursor: pointer;
   transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
   box-shadow: 0 4px 20px rgba(2, 132, 199, 0.18);
+  white-space: nowrap;
 }
 
 .btn-coconut-top:hover {
@@ -1745,6 +1785,43 @@ body::after {
   .filter-hub {
     padding: 20px;
   }
+
+  .nav-container {
+    flex-wrap: wrap;
+    gap: 10px 14px;
+  }
+
+  .brand {
+    order: 1;
+  }
+
+  .nav-controls {
+    order: 2;
+  }
+
+  .nav-links-scroll {
+    order: 3;
+    width: 100%;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    gap: 6px;
+    padding: 2px 0 4px 0;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .nav-links-scroll::-webkit-scrollbar {
+    display: none;
+  }
+
+  .nav-link {
+    font-size: 13px;
+    padding: 6px 12px;
+    border-radius: 16px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    flex-shrink: 0;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1754,23 +1831,76 @@ body::after {
   }
 
   .navbar {
-    padding: 10px 0;
+    padding: 8px 0;
   }
 
   .nav-container {
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .brand {
+    order: 1;
     gap: 8px;
   }
 
-  .nav-link {
-    display: none;
+  .brand-icon {
+    font-size: 22px;
   }
 
   .brand-text {
-    font-size: 19px;
+    font-size: 18px;
   }
 
   .brand-badge {
+    display: inline-flex !important;
+    font-size: 9.5px;
+    padding: 2px 7px;
+    letter-spacing: 0.3px;
+    border-radius: 12px;
+  }
+
+  .nav-controls {
+    order: 2;
+    gap: 8px;
+  }
+
+  .nav-links-scroll {
+    order: 3;
+    width: 100%;
+    display: flex !important;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    gap: 6px;
+    padding: 3px 0 4px 0;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .nav-links-scroll::-webkit-scrollbar {
     display: none;
+  }
+
+  .nav-link {
+    display: inline-flex !important;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 5px 12px;
+    border-radius: 18px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    color: var(--text-dim);
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .nav-link:hover,
+  .nav-link.active {
+    color: #38bdf8;
+    border-color: rgba(56, 189, 248, 0.45);
+    background: rgba(56, 189, 248, 0.12);
   }
 
   .btn-trip {
@@ -2263,6 +2393,42 @@ body::after {
     text-align: center;
     font-size: 12.5px;
     padding: 9px 14px;
+  }
+
+  /* Footer (Mobile) */
+  .footer {
+    padding: 34px 0 28px 0;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 20px;
+    text-align: left;
+  }
+
+  .footer-right {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+  }
+
+  .btn-coconut-top {
+    padding: 10px 22px;
+    font-size: 13.5px;
+  }
+
+  /* Floating Coconut Return to Top Button (Mobile) */
+  .floating-coconut-btn {
+    bottom: calc(18px + env(safe-area-inset-bottom, 0px));
+    right: 18px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .floating-coconut-svg {
+    width: 28px;
+    height: 28px;
   }
 }
 

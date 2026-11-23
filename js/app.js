@@ -889,11 +889,40 @@ function initEventListeners() {
 
     // Show floating button when scrolled down
     window.addEventListener('scroll', () => {
-      if (window.scrollY > 350) {
+      if (window.scrollY > 180) {
         floatingScrollBtn.classList.add('show');
       } else {
         floatingScrollBtn.classList.remove('show');
       }
+    }, { passive: true });
+  }
+
+  // Active section indicator for nav links (Scroll Spy)
+  const navLinks = document.querySelectorAll('#navLinksScroll .nav-link');
+  if (navLinks.length > 0) {
+    const sections = Array.from(navLinks).map(link => {
+      const href = link.getAttribute('href');
+      return href ? document.querySelector(href) : null;
+    }).filter(Boolean);
+
+    window.addEventListener('scroll', () => {
+      let currentId = '';
+      const scrollPos = window.scrollY + 140;
+
+      sections.forEach(sec => {
+        if (sec.offsetTop <= scrollPos) {
+          currentId = sec.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        const href = link.getAttribute('href');
+        if (currentId && href === `#${currentId}`) {
+          link.classList.add('active');
+        } else {
+          link.classList.remove('active');
+        }
+      });
     }, { passive: true });
   }
 }

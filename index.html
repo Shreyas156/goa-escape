@@ -38,7 +38,7 @@
         <span class="brand-badge">2025 Edition</span>
       </a>
 
-      <div class="nav-actions">
+      <div class="nav-links-scroll" id="navLinksScroll">
         <a href="#explore" class="nav-link">Spots</a>
         <a href="#itineraries" class="nav-link">5-Day Plan</a>
         <a href="#cafes" class="nav-link">Cafes</a>
@@ -47,7 +47,9 @@
         <a href="#activities" class="nav-link">Activities</a>
         <a href="#sightseeing" class="nav-link">Sightseeing</a>
         <a href="#tips" class="nav-link">Hacks</a>
-        
+      </div>
+
+      <div class="nav-controls">
         <button id="btnOpenTrip" class="btn-trip" title="View Saved Bucket List">
           <span class="trip-btn-text-full">🎒 My Goa Trip</span>
           <span class="trip-btn-text-short">🎒 Trip</span>
@@ -329,14 +331,19 @@
 
   <!-- Footer -->
   <footer class="footer">
-    <div class="container footer-content">
-      <div class="footer-brand">🌴 Goa Escape</div>
-      <p class="footer-text">
-        The ultimate modern guide to discovering North and South Goa. Designed with love for road-trippers, reel creators, and peace seekers.
-      </p>
+    <div class="container footer-container">
+      <div class="footer-left">
+        <div class="footer-brand">🌴 Goa Escape</div>
+        <p class="footer-text">
+          The ultimate modern guide to discovering North and South Goa. Designed with love for road-trippers, reel creators, and peace seekers.
+        </p>
+        <p class="footer-subtext">
+          🚀 Optimized for instant 1-click deployment on <strong>Vercel</strong>.
+        </p>
+      </div>
 
-      <!-- Return to Top Coconut Button at the end of the page -->
-      <div class="footer-top-wrap">
+      <!-- Return to Top Coconut Button on the Right Side -->
+      <div class="footer-right">
         <button id="footerScrollTop" class="btn-coconut-top" title="Catch the wave back to top!">
           <span class="coconut-icon-wrap">
             <svg class="coconut-svg" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -353,7 +360,7 @@
               <circle cx="21" cy="24" r="1.8" fill="#facc15"/>
             </svg>
           </span>
-          <span class="btn-coconut-text">Back to Top</span>
+          <span class="btn-coconut-text">Back to Top 🥥</span>
           <span class="coconut-arrow">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
               <path d="M12 19V5M5 12l7-7 7 7"/>
@@ -361,10 +368,6 @@
           </span>
         </button>
       </div>
-
-      <p style="font-size: 13px; color: var(--text-dim); margin-top: 20px;">
-        🚀 Optimized for instant 1-click deployment on <strong>Vercel</strong>.
-      </p>
     </div>
   </footer>
 
